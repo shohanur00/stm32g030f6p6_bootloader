@@ -1,0 +1,1702 @@
+Component: Arm Compiler for Embedded 6.21 Tool: armlink [5ec1fa00]
+
+==============================================================================
+
+Section Cross References
+
+    app.o(.text.JumpToApp) refers to debug.o(.text.Debug_Tx_Parameter_Hex_NL) for Debug_Tx_Parameter_Hex_NL
+    app.o(.text.JumpToApp) refers to app.o(.rodata.str1.1) for [Anonymous Symbol]
+    app.o(.ARM.exidx.text.JumpToApp) refers to app.o(.text.JumpToApp) for [Anonymous Symbol]
+    app.o(.text.App_Setup) refers to gpio.o(.text.GPIO_Init) for GPIO_Init
+    app.o(.text.App_Setup) refers to gpio.o(.text.GPIO_SetPin) for GPIO_SetPin
+    app.o(.text.App_Setup) refers to debug.o(.text.Debug_Init) for Debug_Init
+    app.o(.text.App_Setup) refers to sw_timebase.o(.text.sw_timebase_Init) for sw_timebase_Init
+    app.o(.text.App_Setup) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) for sw_timebase_counter_ss_set_securely
+    app.o(.ARM.exidx.text.App_Setup) refers to app.o(.text.App_Setup) for [Anonymous Symbol]
+    app.o(.text.App_Main_Loop) refers to sw_timebase.o(.text.sw_timebase_main_loop_executable) for sw_timebase_main_loop_executable
+    app.o(.text.App_Main_Loop) refers to sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event) for sw_timebase_counter_ss_continous_expired_event
+    app.o(.text.App_Main_Loop) refers to gpio.o(.text.GPIO_TogglePin) for GPIO_TogglePin
+    app.o(.text.App_Main_Loop) refers to app.o(.text.JumpToApp) for JumpToApp
+    app.o(.ARM.exidx.text.App_Main_Loop) refers to app.o(.text.App_Main_Loop) for [Anonymous Symbol]
+    crc32.o(.ARM.exidx.text.CRC32_Init) refers to crc32.o(.text.CRC32_Init) for [Anonymous Symbol]
+    crc32.o(.text.CRC32_Calculate) refers to crc32.o(.text.CRC32_Init) for CRC32_Init
+    crc32.o(.ARM.exidx.text.CRC32_Calculate) refers to crc32.o(.text.CRC32_Calculate) for [Anonymous Symbol]
+    crc32.o(.text.CRC32_MemoryRange) refers to crc32.o(.text.CRC32_Init) for CRC32_Init
+    crc32.o(.ARM.exidx.text.CRC32_MemoryRange) refers to crc32.o(.text.CRC32_MemoryRange) for [Anonymous Symbol]
+    debug.o(.text.Debug_Struct_Init) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Struct_Init) refers to debug.o(.text.Debug_Struct_Init) for [Anonymous Symbol]
+    debug.o(.ARM.exidx.text.Debug_GPIO_Init) refers to debug.o(.text.Debug_GPIO_Init) for [Anonymous Symbol]
+    debug.o(.text.Debug_Reg_Init) refers to aeabi_sdiv.o(.text) for __aeabi_uidiv
+    debug.o(.text.Debug_Reg_Init) refers to debug.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    debug.o(.text.Debug_Reg_Init) refers to debug.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    debug.o(.ARM.exidx.text.Debug_Reg_Init) refers to debug.o(.text.Debug_Reg_Init) for [Anonymous Symbol]
+    debug.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to debug.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    debug.o(.ARM.exidx.text.__NVIC_SetPriority) refers to debug.o(.text.__NVIC_SetPriority) for [Anonymous Symbol]
+    debug.o(.text.Debug_Timer_Init) refers to debug.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    debug.o(.text.Debug_Timer_Init) refers to debug.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    debug.o(.ARM.exidx.text.Debug_Timer_Init) refers to debug.o(.text.Debug_Timer_Init) for [Anonymous Symbol]
+    debug.o(.text.Debug_Timer_Enable) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Timer_Enable) refers to debug.o(.text.Debug_Timer_Enable) for [Anonymous Symbol]
+    debug.o(.text.Debug_Timer_Disable) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Timer_Disable) refers to debug.o(.text.Debug_Timer_Disable) for [Anonymous Symbol]
+    debug.o(.text.Debug_Get_Timer_Status) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Get_Timer_Status) refers to debug.o(.text.Debug_Get_Timer_Status) for [Anonymous Symbol]
+    debug.o(.ARM.exidx.text.Debug_Get_Counter_Val) refers to debug.o(.text.Debug_Get_Counter_Val) for [Anonymous Symbol]
+    debug.o(.ARM.exidx.text.Debug_Counter_Reset) refers to debug.o(.text.Debug_Counter_Reset) for [Anonymous Symbol]
+    debug.o(.text.TIM16_IRQHandler) refers to debug.o(.text.Debug_Timer_Disable) for Debug_Timer_Disable
+    debug.o(.text.TIM16_IRQHandler) refers to debug.o(.text.Debug_Get_Buf_Index) for Debug_Get_Buf_Index
+    debug.o(.text.TIM16_IRQHandler) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.TIM16_IRQHandler) refers to debug.o(.text.TIM16_IRQHandler) for [Anonymous Symbol]
+    debug.o(.text.Debug_Get_Buf_Index) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Get_Buf_Index) refers to debug.o(.text.Debug_Get_Buf_Index) for [Anonymous Symbol]
+    debug.o(.ARM.exidx.text.Debug_Tx_Byte) refers to debug.o(.text.Debug_Tx_Byte) for [Anonymous Symbol]
+    debug.o(.ARM.exidx.text.Debug_Rx_Byte) refers to debug.o(.text.Debug_Rx_Byte) for [Anonymous Symbol]
+    debug.o(.text.USART2_IRQHandler) refers to debug.o(.text.Debug_Rx_Byte) for Debug_Rx_Byte
+    debug.o(.text.USART2_IRQHandler) refers to debug.o(.text.Debug_Counter_Reset) for Debug_Counter_Reset
+    debug.o(.text.USART2_IRQHandler) refers to debug.o(.text.Debug_Timer_Enable) for Debug_Timer_Enable
+    debug.o(.text.USART2_IRQHandler) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.USART2_IRQHandler) refers to debug.o(.text.USART2_IRQHandler) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Buf) refers to debug.o(.text.Debug_Tx_Byte) for Debug_Tx_Byte
+    debug.o(.ARM.exidx.text.Debug_Tx_Buf) refers to debug.o(.text.Debug_Tx_Buf) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_NL) refers to debug.o(.text.Debug_Tx_Byte) for Debug_Tx_Byte
+    debug.o(.ARM.exidx.text.Debug_Tx_NL) refers to debug.o(.text.Debug_Tx_NL) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_SP) refers to debug.o(.text.Debug_Tx_Byte) for Debug_Tx_Byte
+    debug.o(.ARM.exidx.text.Debug_Tx_SP) refers to debug.o(.text.Debug_Tx_SP) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_CM) refers to debug.o(.text.Debug_Tx_Byte) for Debug_Tx_Byte
+    debug.o(.ARM.exidx.text.Debug_Tx_CM) refers to debug.o(.text.Debug_Tx_CM) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Text) refers to debug.o(.text.Debug_Tx_Byte) for Debug_Tx_Byte
+    debug.o(.ARM.exidx.text.Debug_Tx_Text) refers to debug.o(.text.Debug_Tx_Text) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Text_NL) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Text_NL) refers to debug.o(.text.Debug_Tx_NL) for Debug_Tx_NL
+    debug.o(.ARM.exidx.text.Debug_Tx_Text_NL) refers to debug.o(.text.Debug_Tx_Text_NL) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Text_SP) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Text_SP) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.ARM.exidx.text.Debug_Tx_Text_SP) refers to debug.o(.text.Debug_Tx_Text_SP) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Text_CM) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Text_CM) refers to debug.o(.text.Debug_Tx_CM) for Debug_Tx_CM
+    debug.o(.ARM.exidx.text.Debug_Tx_Text_CM) refers to debug.o(.text.Debug_Tx_Text_CM) for [Anonymous Symbol]
+    debug.o(.text.Debug_Determine_Digit_Numbers) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    debug.o(.text.Debug_Determine_Digit_Numbers) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Determine_Digit_Numbers) refers to debug.o(.text.Debug_Determine_Digit_Numbers) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_Digits) refers to debug.o(.text.Debug_Tx_Byte) for Debug_Tx_Byte
+    debug.o(.text.Debug_Tx_Number_Digits) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_Digits) refers to debug.o(.text.Debug_Tx_Number_Digits) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number) refers to debug.o(.text.Debug_Tx_Byte) for Debug_Tx_Byte
+    debug.o(.text.Debug_Tx_Number) refers to debug.o(.text.Debug_Determine_Digit_Numbers) for Debug_Determine_Digit_Numbers
+    debug.o(.text.Debug_Tx_Number) refers to debug.o(.text.Debug_Tx_Number_Digits) for Debug_Tx_Number_Digits
+    debug.o(.ARM.exidx.text.Debug_Tx_Number) refers to debug.o(.text.Debug_Tx_Number) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_Hex) refers to debug.o(.text.Debug_Tx_Byte) for Debug_Tx_Byte
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_Hex) refers to debug.o(.text.Debug_Tx_Number_Hex) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_Bin) refers to debug.o(.text.Debug_Tx_Byte) for Debug_Tx_Byte
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_Bin) refers to debug.o(.text.Debug_Tx_Number_Bin) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_NL) refers to debug.o(.text.Debug_Tx_Number) for Debug_Tx_Number
+    debug.o(.text.Debug_Tx_Number_NL) refers to debug.o(.text.Debug_Tx_NL) for Debug_Tx_NL
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_NL) refers to debug.o(.text.Debug_Tx_Number_NL) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_SP) refers to debug.o(.text.Debug_Tx_Number) for Debug_Tx_Number
+    debug.o(.text.Debug_Tx_Number_SP) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_SP) refers to debug.o(.text.Debug_Tx_Number_SP) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_CM) refers to debug.o(.text.Debug_Tx_Number) for Debug_Tx_Number
+    debug.o(.text.Debug_Tx_Number_CM) refers to debug.o(.text.Debug_Tx_CM) for Debug_Tx_CM
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_CM) refers to debug.o(.text.Debug_Tx_Number_CM) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_Hex_NL) refers to debug.o(.text.Debug_Tx_Number_Hex) for Debug_Tx_Number_Hex
+    debug.o(.text.Debug_Tx_Number_Hex_NL) refers to debug.o(.text.Debug_Tx_NL) for Debug_Tx_NL
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_Hex_NL) refers to debug.o(.text.Debug_Tx_Number_Hex_NL) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_Hex_SP) refers to debug.o(.text.Debug_Tx_Number_Hex) for Debug_Tx_Number_Hex
+    debug.o(.text.Debug_Tx_Number_Hex_SP) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_Hex_SP) refers to debug.o(.text.Debug_Tx_Number_Hex_SP) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_Hex_CM) refers to debug.o(.text.Debug_Tx_Number_Hex) for Debug_Tx_Number_Hex
+    debug.o(.text.Debug_Tx_Number_Hex_CM) refers to debug.o(.text.Debug_Tx_CM) for Debug_Tx_CM
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_Hex_CM) refers to debug.o(.text.Debug_Tx_Number_Hex_CM) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_Bin_NL) refers to debug.o(.text.Debug_Tx_Number_Bin) for Debug_Tx_Number_Bin
+    debug.o(.text.Debug_Tx_Number_Bin_NL) refers to debug.o(.text.Debug_Tx_NL) for Debug_Tx_NL
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_Bin_NL) refers to debug.o(.text.Debug_Tx_Number_Bin_NL) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_Bin_SP) refers to debug.o(.text.Debug_Tx_Number_Bin) for Debug_Tx_Number_Bin
+    debug.o(.text.Debug_Tx_Number_Bin_SP) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_Bin_SP) refers to debug.o(.text.Debug_Tx_Number_Bin_SP) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Number_Bin_CM) refers to debug.o(.text.Debug_Tx_Number_Bin) for Debug_Tx_Number_Bin
+    debug.o(.text.Debug_Tx_Number_Bin_CM) refers to debug.o(.text.Debug_Tx_CM) for Debug_Tx_CM
+    debug.o(.ARM.exidx.text.Debug_Tx_Number_Bin_CM) refers to debug.o(.text.Debug_Tx_Number_Bin_CM) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Parameter_NL) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Parameter_NL) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.text.Debug_Tx_Parameter_NL) refers to debug.o(.text.Debug_Tx_Number_NL) for Debug_Tx_Number_NL
+    debug.o(.ARM.exidx.text.Debug_Tx_Parameter_NL) refers to debug.o(.text.Debug_Tx_Parameter_NL) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Parameter_SP) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Parameter_SP) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.text.Debug_Tx_Parameter_SP) refers to debug.o(.text.Debug_Tx_Number_SP) for Debug_Tx_Number_SP
+    debug.o(.ARM.exidx.text.Debug_Tx_Parameter_SP) refers to debug.o(.text.Debug_Tx_Parameter_SP) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Parameter_CM) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Parameter_CM) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.text.Debug_Tx_Parameter_CM) refers to debug.o(.text.Debug_Tx_Number_CM) for Debug_Tx_Number_CM
+    debug.o(.ARM.exidx.text.Debug_Tx_Parameter_CM) refers to debug.o(.text.Debug_Tx_Parameter_CM) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Parameter_Hex_NL) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Parameter_Hex_NL) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.text.Debug_Tx_Parameter_Hex_NL) refers to debug.o(.text.Debug_Tx_Number_Hex_NL) for Debug_Tx_Number_Hex_NL
+    debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Hex_NL) refers to debug.o(.text.Debug_Tx_Parameter_Hex_NL) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Parameter_Hex_SP) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Parameter_Hex_SP) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.text.Debug_Tx_Parameter_Hex_SP) refers to debug.o(.text.Debug_Tx_Number_Hex_SP) for Debug_Tx_Number_Hex_SP
+    debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Hex_SP) refers to debug.o(.text.Debug_Tx_Parameter_Hex_SP) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Parameter_Hex_CM) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Parameter_Hex_CM) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.text.Debug_Tx_Parameter_Hex_CM) refers to debug.o(.text.Debug_Tx_Number_Hex_CM) for Debug_Tx_Number_Hex_CM
+    debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Hex_CM) refers to debug.o(.text.Debug_Tx_Parameter_Hex_CM) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Parameter_Bin_NL) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Parameter_Bin_NL) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.text.Debug_Tx_Parameter_Bin_NL) refers to debug.o(.text.Debug_Tx_Number_Bin_NL) for Debug_Tx_Number_Bin_NL
+    debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Bin_NL) refers to debug.o(.text.Debug_Tx_Parameter_Bin_NL) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Parameter_Bin_SP) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Parameter_Bin_SP) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.text.Debug_Tx_Parameter_Bin_SP) refers to debug.o(.text.Debug_Tx_Number_Bin_SP) for Debug_Tx_Number_Bin_SP
+    debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Bin_SP) refers to debug.o(.text.Debug_Tx_Parameter_Bin_SP) for [Anonymous Symbol]
+    debug.o(.text.Debug_Tx_Parameter_Bin_CM) refers to debug.o(.text.Debug_Tx_Text) for Debug_Tx_Text
+    debug.o(.text.Debug_Tx_Parameter_Bin_CM) refers to debug.o(.text.Debug_Tx_SP) for Debug_Tx_SP
+    debug.o(.text.Debug_Tx_Parameter_Bin_CM) refers to debug.o(.text.Debug_Tx_Number_Bin_CM) for Debug_Tx_Number_Bin_CM
+    debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Bin_CM) refers to debug.o(.text.Debug_Tx_Parameter_Bin_CM) for [Anonymous Symbol]
+    debug.o(.text.Debug_Flush_Buf) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Flush_Buf) refers to debug.o(.text.Debug_Flush_Buf) for [Anonymous Symbol]
+    debug.o(.text.Debug_Get_Buf) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Get_Buf) refers to debug.o(.text.Debug_Get_Buf) for [Anonymous Symbol]
+    debug.o(.text.Debug_Get_Data_Available_Flag) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Get_Data_Available_Flag) refers to debug.o(.text.Debug_Get_Data_Available_Flag) for [Anonymous Symbol]
+    debug.o(.text.Debug_Data_Available) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Data_Available) refers to debug.o(.text.Debug_Data_Available) for [Anonymous Symbol]
+    debug.o(.text.Debug_Clear_Data_Available_Flag) refers to debug.o(.bss.Debug) for Debug
+    debug.o(.ARM.exidx.text.Debug_Clear_Data_Available_Flag) refers to debug.o(.text.Debug_Clear_Data_Available_Flag) for [Anonymous Symbol]
+    debug.o(.text.Debug_Get_Data_Len) refers to debug.o(.text.Debug_Get_Buf_Index) for Debug_Get_Buf_Index
+    debug.o(.ARM.exidx.text.Debug_Get_Data_Len) refers to debug.o(.text.Debug_Get_Data_Len) for [Anonymous Symbol]
+    debug.o(.text.Debug_Data_Copy_Buf) refers to debug.o(.text.Debug_Get_Data_Len) for Debug_Get_Data_Len
+    debug.o(.text.Debug_Data_Copy_Buf) refers to debug.o(.text.Debug_Get_Buf) for Debug_Get_Buf
+    debug.o(.ARM.exidx.text.Debug_Data_Copy_Buf) refers to debug.o(.text.Debug_Data_Copy_Buf) for [Anonymous Symbol]
+    debug.o(.text.Debug_Print_Buf_Data) refers to debug.o(.text.Debug_Data_Available) for Debug_Data_Available
+    debug.o(.text.Debug_Print_Buf_Data) refers to debug.o(.text.Debug_Get_Data_Len) for Debug_Get_Data_Len
+    debug.o(.text.Debug_Print_Buf_Data) refers to debug.o(.text.Debug_Get_Buf) for Debug_Get_Buf
+    debug.o(.text.Debug_Print_Buf_Data) refers to debug.o(.text.Debug_Tx_Number_Hex) for Debug_Tx_Number_Hex
+    debug.o(.text.Debug_Print_Buf_Data) refers to debug.o(.text.Debug_Tx_NL) for Debug_Tx_NL
+    debug.o(.ARM.exidx.text.Debug_Print_Buf_Data) refers to debug.o(.text.Debug_Print_Buf_Data) for [Anonymous Symbol]
+    debug.o(.text.Debug_Init) refers to debug.o(.text.Debug_Struct_Init) for Debug_Struct_Init
+    debug.o(.text.Debug_Init) refers to debug.o(.text.Debug_GPIO_Init) for Debug_GPIO_Init
+    debug.o(.text.Debug_Init) refers to debug.o(.text.Debug_Reg_Init) for Debug_Reg_Init
+    debug.o(.text.Debug_Init) refers to debug.o(.text.Debug_Timer_Init) for Debug_Timer_Init
+    debug.o(.ARM.exidx.text.Debug_Init) refers to debug.o(.text.Debug_Init) for [Anonymous Symbol]
+    flash.o(.text.flash_erase_page) refers to flash.o(.text.flash_wait_busy) for flash_wait_busy
+    flash.o(.text.flash_erase_page) refers to flash.o(.text.flash_clear_flags) for flash_clear_flags
+    flash.o(.text.flash_erase_page) refers to flash.o(.text.flash_unlock) for flash_unlock
+    flash.o(.text.flash_erase_page) refers to flash.o(.text.flash_lock) for flash_lock
+    flash.o(.ARM.exidx.text.flash_erase_page) refers to flash.o(.text.flash_erase_page) for [Anonymous Symbol]
+    flash.o(.ARM.exidx.text.flash_wait_busy) refers to flash.o(.text.flash_wait_busy) for [Anonymous Symbol]
+    flash.o(.ARM.exidx.text.flash_clear_flags) refers to flash.o(.text.flash_clear_flags) for [Anonymous Symbol]
+    flash.o(.ARM.exidx.text.flash_unlock) refers to flash.o(.text.flash_unlock) for [Anonymous Symbol]
+    flash.o(.ARM.exidx.text.flash_lock) refers to flash.o(.text.flash_lock) for [Anonymous Symbol]
+    flash.o(.text.flash_erase_page_by_number) refers to flash.o(.text.flash_wait_busy) for flash_wait_busy
+    flash.o(.text.flash_erase_page_by_number) refers to flash.o(.text.flash_clear_flags) for flash_clear_flags
+    flash.o(.text.flash_erase_page_by_number) refers to flash.o(.text.flash_unlock) for flash_unlock
+    flash.o(.text.flash_erase_page_by_number) refers to flash.o(.text.flash_lock) for flash_lock
+    flash.o(.ARM.exidx.text.flash_erase_page_by_number) refers to flash.o(.text.flash_erase_page_by_number) for [Anonymous Symbol]
+    flash.o(.text.flash_write_word) refers to flash.o(.text.flash_wait_busy) for flash_wait_busy
+    flash.o(.text.flash_write_word) refers to flash.o(.text.flash_clear_flags) for flash_clear_flags
+    flash.o(.text.flash_write_word) refers to flash.o(.text.flash_unlock) for flash_unlock
+    flash.o(.text.flash_write_word) refers to flash.o(.text.flash_lock) for flash_lock
+    flash.o(.ARM.exidx.text.flash_write_word) refers to flash.o(.text.flash_write_word) for [Anonymous Symbol]
+    flash.o(.text.flash_erase_full_pages) refers to flash.o(.text.flash_erase_page_by_number) for flash_erase_page_by_number
+    flash.o(.ARM.exidx.text.flash_erase_full_pages) refers to flash.o(.text.flash_erase_full_pages) for [Anonymous Symbol]
+    flash.o(.ARM.exidx.text.flash_get_page_address) refers to flash.o(.text.flash_get_page_address) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_Init) refers to gpio.o(.text.GPIO_Init) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_SetPin) refers to gpio.o(.text.GPIO_SetPin) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_ResetPin) refers to gpio.o(.text.GPIO_ResetPin) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_TogglePin) refers to gpio.o(.text.GPIO_TogglePin) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_ReadPin) refers to gpio.o(.text.GPIO_ReadPin) for [Anonymous Symbol]
+    main.o(.text.main) refers to app.o(.text.App_Setup) for App_Setup
+    main.o(.text.main) refers to app.o(.text.App_Main_Loop) for App_Main_Loop
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_struct_init) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.text.sw_timebase_struct_init) refers to sw_timebase.o(.bss.sw_timebase_type) for sw_timebase_type
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_struct_init) refers to sw_timebase.o(.text.sw_timebase_struct_init) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_enable) refers to aeabi_sdiv.o(.text) for __aeabi_uidiv
+    sw_timebase.o(.text.sw_timebase_enable) refers to sw_timebase.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    sw_timebase.o(.text.sw_timebase_enable) refers to sw_timebase.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    sw_timebase.o(.text.sw_timebase_enable) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_enable) refers to sw_timebase.o(.text.sw_timebase_enable) for [Anonymous Symbol]
+    sw_timebase.o(.ARM.exidx.text.__NVIC_SetPriority) refers to sw_timebase.o(.text.__NVIC_SetPriority) for [Anonymous Symbol]
+    sw_timebase.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to sw_timebase.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_Init) refers to sw_timebase.o(.text.sw_timebase_struct_init) for sw_timebase_struct_init
+    sw_timebase.o(.text.sw_timebase_Init) refers to sw_timebase.o(.text.sw_timebase_enable) for sw_timebase_enable
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_Init) refers to sw_timebase.o(.text.sw_timebase_Init) for [Anonymous Symbol]
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_disable) refers to sw_timebase.o(.text.sw_timebase_disable) for [Anonymous Symbol]
+    sw_timebase.o(.ARM.exidx.text.sw_hardware_timer_disable) refers to sw_timebase.o(.text.sw_hardware_timer_disable) for [Anonymous Symbol]
+    sw_timebase.o(.ARM.exidx.text.sw_hardware_timer_reset) refers to sw_timebase.o(.text.sw_hardware_timer_reset) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_hardware_timer_interrupt_enable) refers to sw_timebase.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    sw_timebase.o(.ARM.exidx.text.sw_hardware_timer_interrupt_enable) refers to sw_timebase.o(.text.sw_hardware_timer_interrupt_enable) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_hardware_timer_interrupt_disable) refers to sw_timebase.o(.text.__NVIC_DisableIRQ) for __NVIC_DisableIRQ
+    sw_timebase.o(.ARM.exidx.text.sw_hardware_timer_interrupt_disable) refers to sw_timebase.o(.text.sw_hardware_timer_interrupt_disable) for [Anonymous Symbol]
+    sw_timebase.o(.ARM.exidx.text.__NVIC_DisableIRQ) refers to sw_timebase.o(.text.__NVIC_DisableIRQ) for [Anonymous Symbol]
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_atomic_operation_start) refers to sw_timebase.o(.text.sw_timebase_atomic_operation_start) for [Anonymous Symbol]
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_atomic_operation_end) refers to sw_timebase.o(.text.sw_timebase_atomic_operation_end) for [Anonymous Symbol]
+    sw_timebase.o(.text.TIM17_IRQHandler) refers to sw_timebase.o(.text.sw_timebase_ISR_executables) for sw_timebase_ISR_executables
+    sw_timebase.o(.ARM.exidx.text.TIM17_IRQHandler) refers to sw_timebase.o(.text.TIM17_IRQHandler) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_ISR_executables) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_ISR_executables) refers to sw_timebase.o(.text.sw_timebase_ISR_executables) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_get_sub_seconds) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_get_sub_seconds) refers to sw_timebase.o(.text.sw_timebase_get_sub_seconds) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_sub_seconds) refers to sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_get_seconds) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_get_seconds) refers to sw_timebase.o(.text.sw_timebase_get_seconds) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_get_shadow_seconds) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_seconds) refers to sw_timebase.o(.text.sw_timebase_get_shadow_seconds) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_uptime) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_sub_seconds_uptime) refers to sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_uptime) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_set_sub_seconds) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_set_sub_seconds) refers to sw_timebase.o(.text.sw_timebase_set_sub_seconds) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_set_shadow_sub_seconds) refers to sw_timebase.o(.text.sw_timebase_atomic_operation_start) for sw_timebase_atomic_operation_start
+    sw_timebase.o(.text.sw_timebase_set_shadow_sub_seconds) refers to sw_timebase.o(.text.sw_timebase_atomic_operation_end) for sw_timebase_atomic_operation_end
+    sw_timebase.o(.text.sw_timebase_set_shadow_sub_seconds) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_set_shadow_sub_seconds) refers to sw_timebase.o(.text.sw_timebase_set_shadow_sub_seconds) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_set_seconds) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_set_seconds) refers to sw_timebase.o(.text.sw_timebase_set_seconds) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_set_shadow_seconds) refers to sw_timebase.o(.text.sw_timebase_atomic_operation_start) for sw_timebase_atomic_operation_start
+    sw_timebase.o(.text.sw_timebase_set_shadow_seconds) refers to sw_timebase.o(.text.sw_timebase_atomic_operation_end) for sw_timebase_atomic_operation_end
+    sw_timebase.o(.text.sw_timebase_set_shadow_seconds) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_set_shadow_seconds) refers to sw_timebase.o(.text.sw_timebase_set_shadow_seconds) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_set_shadow_sub_seconds_uptime) refers to sw_timebase.o(.text.sw_timebase_atomic_operation_start) for sw_timebase_atomic_operation_start
+    sw_timebase.o(.text.sw_timebase_set_shadow_sub_seconds_uptime) refers to sw_timebase.o(.text.sw_timebase_atomic_operation_end) for sw_timebase_atomic_operation_end
+    sw_timebase.o(.text.sw_timebase_set_shadow_sub_seconds_uptime) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_set_shadow_sub_seconds_uptime) refers to sw_timebase.o(.text.sw_timebase_set_shadow_sub_seconds_uptime) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_securely) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_sub_seconds_securely) refers to sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_securely) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_get_shadow_seconds_securely) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_seconds_securely) refers to sw_timebase.o(.text.sw_timebase_get_shadow_seconds_securely) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_uptime_securely) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_sub_seconds_uptime_securely) refers to sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_uptime_securely) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_get_status) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_status) refers to sw_timebase.o(.text.sw_timebase_counter_get_status) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_status) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_status) refers to sw_timebase.o(.text.sw_timebase_counter_set_status) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_get_period_status_flag) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_period_status_flag) refers to sw_timebase.o(.text.sw_timebase_counter_get_period_status_flag) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_period_status_flag) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_period_status_flag) refers to sw_timebase.o(.text.sw_timebase_counter_set_period_status_flag) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_reset_period_status_flag) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_reset_period_status_flag) refers to sw_timebase.o(.text.sw_timebase_counter_reset_period_status_flag) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_get_current_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_current_value) refers to sw_timebase.o(.text.sw_timebase_counter_get_current_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_current_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_current_value) refers to sw_timebase.o(.text.sw_timebase_counter_set_current_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_get_end_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_end_value) refers to sw_timebase.o(.text.sw_timebase_counter_get_end_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_end_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_end_value) refers to sw_timebase.o(.text.sw_timebase_counter_set_end_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_get_period_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_get_period_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_period_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_set_period_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_get_reload_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_reload_value) refers to sw_timebase.o(.text.sw_timebase_counter_get_reload_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_reload_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_reload_value) refers to sw_timebase.o(.text.sw_timebase_counter_set_reload_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_get_target_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_target_value) refers to sw_timebase.o(.text.sw_timebase_counter_get_target_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_target_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_target_value) refers to sw_timebase.o(.text.sw_timebase_counter_set_target_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_get_temporary_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_temporary_value) refers to sw_timebase.o(.text.sw_timebase_counter_get_temporary_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_temporary_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_temporary_value) refers to sw_timebase.o(.text.sw_timebase_counter_set_temporary_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_reset) refers to sw_timebase.o(.text.sw_timebase_counter_set_status) for sw_timebase_counter_set_status
+    sw_timebase.o(.text.sw_timebase_counter_reset) refers to sw_timebase.o(.text.sw_timebase_counter_set_temporary_value) for sw_timebase_counter_set_temporary_value
+    sw_timebase.o(.text.sw_timebase_counter_reset) refers to sw_timebase.o(.text.sw_timebase_counter_set_target_value) for sw_timebase_counter_set_target_value
+    sw_timebase.o(.text.sw_timebase_counter_reset) refers to sw_timebase.o(.text.sw_timebase_counter_set_reload_value) for sw_timebase_counter_set_reload_value
+    sw_timebase.o(.text.sw_timebase_counter_reset) refers to sw_timebase.o(.text.sw_timebase_counter_set_period_value) for sw_timebase_counter_set_period_value
+    sw_timebase.o(.text.sw_timebase_counter_reset) refers to sw_timebase.o(.text.sw_timebase_counter_set_end_value) for sw_timebase_counter_set_end_value
+    sw_timebase.o(.text.sw_timebase_counter_reset) refers to sw_timebase.o(.text.sw_timebase_counter_set_current_value) for sw_timebase_counter_set_current_value
+    sw_timebase.o(.text.sw_timebase_counter_reset) refers to sw_timebase.o(.text.sw_timebase_counter_reset_period_status_flag) for sw_timebase_counter_reset_period_status_flag
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_reset) refers to sw_timebase.o(.text.sw_timebase_counter_reset) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_clear_flag) refers to sw_timebase.o(.text.sw_timebase_counter_reset) for sw_timebase_counter_reset
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_clear_flag) refers to sw_timebase.o(.text.sw_timebase_counter_clear_flag) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_start) refers to sw_timebase.o(.text.sw_timebase_counter_get_status) for sw_timebase_counter_get_status
+    sw_timebase.o(.text.sw_timebase_counter_start) refers to sw_timebase.o(.text.sw_timebase_counter_set_status) for sw_timebase_counter_set_status
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_start) refers to sw_timebase.o(.text.sw_timebase_counter_start) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_stop) refers to sw_timebase.o(.text.sw_timebase_counter_get_status) for sw_timebase_counter_get_status
+    sw_timebase.o(.text.sw_timebase_counter_stop) refers to sw_timebase.o(.text.sw_timebase_counter_set_status) for sw_timebase_counter_set_status
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_stop) refers to sw_timebase.o(.text.sw_timebase_counter_stop) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_get_status) for sw_timebase_counter_get_status
+    sw_timebase.o(.text.sw_timebase_counter_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_set_current_value) for sw_timebase_counter_set_current_value
+    sw_timebase.o(.text.sw_timebase_counter_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_set_temporary_value) for sw_timebase_counter_set_temporary_value
+    sw_timebase.o(.text.sw_timebase_counter_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_set_target_value) for sw_timebase_counter_set_target_value
+    sw_timebase.o(.text.sw_timebase_counter_set_securely) refers to sw_timebase.o(.text.sw_timebase_get_seconds) for sw_timebase_get_seconds
+    sw_timebase.o(.text.sw_timebase_counter_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_set_end_value) for sw_timebase_counter_set_end_value
+    sw_timebase.o(.text.sw_timebase_counter_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_set_reload_value) for sw_timebase_counter_set_reload_value
+    sw_timebase.o(.text.sw_timebase_counter_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_set_status) for sw_timebase_counter_set_status
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_set_securely) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_forcefully) refers to sw_timebase.o(.text.sw_timebase_counter_reset) for sw_timebase_counter_reset
+    sw_timebase.o(.text.sw_timebase_counter_set_forcefully) refers to sw_timebase.o(.text.sw_timebase_counter_set_securely) for sw_timebase_counter_set_securely
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_forcefully) refers to sw_timebase.o(.text.sw_timebase_counter_set_forcefully) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_get_status) for sw_timebase_counter_get_status
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_get_seconds) for sw_timebase_get_seconds
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_get_end_value) for sw_timebase_counter_get_end_value
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_set_temporary_value) for sw_timebase_counter_set_temporary_value
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_get_target_value) for sw_timebase_counter_get_target_value
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_get_temporary_value) for sw_timebase_counter_get_temporary_value
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_set_current_value) for sw_timebase_counter_set_current_value
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_set_end_value) for sw_timebase_counter_set_end_value
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_get_reload_value) for sw_timebase_counter_get_reload_value
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_set_reload_value) for sw_timebase_counter_set_reload_value
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_set_status) for sw_timebase_counter_set_status
+    sw_timebase.o(.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_get_current_value) for sw_timebase_counter_get_current_value
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_update) refers to sw_timebase.o(.text.sw_timebase_counter_update) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_expired) refers to sw_timebase.o(.text.sw_timebase_counter_get_status) for sw_timebase_counter_get_status
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_expired) refers to sw_timebase.o(.text.sw_timebase_counter_expired) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_get_status) for sw_timebase_counter_get_status
+    sw_timebase.o(.text.sw_timebase_counter_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_clear_flag) for sw_timebase_counter_clear_flag
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_expired_event) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_oneshot_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_expired_event) for sw_timebase_counter_expired_event
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_oneshot_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_oneshot_expired_event) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_continous_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_get_status) for sw_timebase_counter_get_status
+    sw_timebase.o(.text.sw_timebase_counter_continous_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_get_reload_value) for sw_timebase_counter_get_reload_value
+    sw_timebase.o(.text.sw_timebase_counter_continous_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_clear_flag) for sw_timebase_counter_clear_flag
+    sw_timebase.o(.text.sw_timebase_counter_continous_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_set_securely) for sw_timebase_counter_set_securely
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_continous_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_continous_expired_event) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_get_period_status_flag) for sw_timebase_counter_get_period_status_flag
+    sw_timebase.o(.text.sw_timebase_counter_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_get_current_value) for sw_timebase_counter_get_current_value
+    sw_timebase.o(.text.sw_timebase_counter_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_get_target_value) for sw_timebase_counter_get_target_value
+    sw_timebase.o(.text.sw_timebase_counter_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_set_period_value) for sw_timebase_counter_set_period_value
+    sw_timebase.o(.text.sw_timebase_counter_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_set_period_status_flag) for sw_timebase_counter_set_period_status_flag
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_set_period_value_securely) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_get_remaining_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_get_current_value) for sw_timebase_counter_get_current_value
+    sw_timebase.o(.text.sw_timebase_counter_get_remaining_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_get_target_value) for sw_timebase_counter_get_target_value
+    sw_timebase.o(.text.sw_timebase_counter_get_remaining_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_get_period_value) for sw_timebase_counter_get_period_value
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_remaining_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_get_remaining_period_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_period_value_expired) refers to sw_timebase.o(.text._period_expired_condition) for _period_expired_condition
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_period_value_expired) refers to sw_timebase.o(.text.sw_timebase_counter_period_value_expired) for [Anonymous Symbol]
+    sw_timebase.o(.text._period_expired_condition) refers to sw_timebase.o(.text.sw_timebase_counter_get_remaining_period_value) for sw_timebase_counter_get_remaining_period_value
+    sw_timebase.o(.text._period_expired_condition) refers to sw_timebase.o(.text.sw_timebase_counter_get_period_status_flag) for sw_timebase_counter_get_period_status_flag
+    sw_timebase.o(.ARM.exidx.text._period_expired_condition) refers to sw_timebase.o(.text._period_expired_condition) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_period_value_expired_event) refers to sw_timebase.o(.text._period_expired_condition) for _period_expired_condition
+    sw_timebase.o(.text.sw_timebase_counter_period_value_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_set_period_status_flag) for sw_timebase_counter_set_period_status_flag
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_period_value_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_period_value_expired_event) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_delay_seconds) refers to sw_timebase.o(.text.sw_timebase_get_shadow_seconds_securely) for sw_timebase_get_shadow_seconds_securely
+    sw_timebase.o(.text.sw_timebase_counter_delay_seconds) refers to sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_securely) for sw_timebase_get_shadow_sub_seconds_securely
+    sw_timebase.o(.text.sw_timebase_counter_delay_seconds) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_delay_seconds) refers to sw_timebase.o(.text.sw_timebase_counter_delay_seconds) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_update_all) refers to sw_timebase.o(.text.sw_timebase_counter_update) for sw_timebase_counter_update
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_update_all) refers to sw_timebase.o(.text.sw_timebase_counter_update_all) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_reset_all) refers to sw_timebase.o(.text.sw_timebase_counter_reset) for sw_timebase_counter_reset
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_reset_all) refers to sw_timebase.o(.text.sw_timebase_counter_reset_all) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_status) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_status) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_status) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_status) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_status) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_status) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_period_status_flag) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_period_status_flag) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_period_status_flag) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_period_status_flag) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_period_status_flag) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_period_status_flag) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_reset_period_status_flag) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_reset_period_status_flag) refers to sw_timebase.o(.text.sw_timebase_counter_ss_reset_period_status_flag) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_current_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_current_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_current_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_current_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_end_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_end_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value_sub_sec) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_end_value_sub_sec) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value_sub_sec) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_end_value_sub_sec) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_period_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_period_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_reload_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_reload_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_reload_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_reload_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_target_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_target_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_temporary_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_temporary_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_temporary_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_temporary_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_reset) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_status) for sw_timebase_counter_ss_set_status
+    sw_timebase.o(.text.sw_timebase_counter_ss_reset) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value) for sw_timebase_counter_ss_set_temporary_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_reset) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value) for sw_timebase_counter_ss_set_target_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_reset) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value) for sw_timebase_counter_ss_set_reload_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_reset) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value) for sw_timebase_counter_ss_set_period_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_reset) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value) for sw_timebase_counter_ss_set_end_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_reset) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value) for sw_timebase_counter_ss_set_current_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_reset) refers to sw_timebase.o(.text.sw_timebase_counter_ss_reset_period_status_flag) for sw_timebase_counter_ss_reset_period_status_flag
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_reset) refers to sw_timebase.o(.text.sw_timebase_counter_ss_reset) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_clear_flag) refers to sw_timebase.o(.text.sw_timebase_counter_ss_reset) for sw_timebase_counter_ss_reset
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_clear_flag) refers to sw_timebase.o(.text.sw_timebase_counter_ss_clear_flag) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_start) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_status) for sw_timebase_counter_ss_get_status
+    sw_timebase.o(.text.sw_timebase_counter_ss_start) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_status) for sw_timebase_counter_ss_set_status
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_start) refers to sw_timebase.o(.text.sw_timebase_counter_ss_start) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_stop) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_status) for sw_timebase_counter_ss_get_status
+    sw_timebase.o(.text.sw_timebase_counter_ss_stop) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_status) for sw_timebase_counter_ss_set_status
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_stop) refers to sw_timebase.o(.text.sw_timebase_counter_ss_stop) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_status) for sw_timebase_counter_ss_get_status
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value) for sw_timebase_counter_ss_set_current_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value) for sw_timebase_counter_ss_set_temporary_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value) for sw_timebase_counter_ss_set_target_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_get_seconds) for sw_timebase_get_seconds
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_get_sub_seconds) for sw_timebase_get_sub_seconds
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value) for sw_timebase_counter_ss_set_end_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec) for sw_timebase_counter_ss_set_end_value_sub_sec
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value) for sw_timebase_counter_ss_set_reload_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_status) for sw_timebase_counter_ss_set_status
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_forcefully) refers to sw_timebase.o(.text.sw_timebase_counter_ss_reset) for sw_timebase_counter_ss_reset
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_forcefully) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) for sw_timebase_counter_ss_set_securely
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_forcefully) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_forcefully) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_status) for sw_timebase_counter_ss_get_status
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_get_seconds) for sw_timebase_get_seconds
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_get_sub_seconds) for sw_timebase_get_sub_seconds
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value) for sw_timebase_counter_ss_get_end_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value_sub_sec) for sw_timebase_counter_ss_get_end_value_sub_sec
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value) for sw_timebase_counter_ss_set_temporary_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value) for sw_timebase_counter_ss_get_target_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value) for sw_timebase_counter_ss_set_current_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value) for sw_timebase_counter_ss_set_end_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec) for sw_timebase_counter_ss_set_end_value_sub_sec
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_reload_value) for sw_timebase_counter_ss_get_reload_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value) for sw_timebase_counter_ss_set_reload_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_status) for sw_timebase_counter_ss_set_status
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_temporary_value) for sw_timebase_counter_ss_get_temporary_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    sw_timebase.o(.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_update) refers to sw_timebase.o(.text.sw_timebase_counter_ss_update) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_expired) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_status) for sw_timebase_counter_ss_get_status
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_expired) refers to sw_timebase.o(.text.sw_timebase_counter_ss_expired) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_status) for sw_timebase_counter_ss_get_status
+    sw_timebase.o(.text.sw_timebase_counter_ss_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_clear_flag) for sw_timebase_counter_ss_clear_flag
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_expired_event) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_oneshot_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_expired_event) for sw_timebase_counter_ss_expired_event
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_oneshot_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_oneshot_expired_event) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_status) for sw_timebase_counter_ss_get_status
+    sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_reload_value) for sw_timebase_counter_ss_get_reload_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_clear_flag) for sw_timebase_counter_ss_clear_flag
+    sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) for sw_timebase_counter_ss_set_securely
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_continous_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_period_status_flag) for sw_timebase_counter_ss_get_period_status_flag
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_current_value) for sw_timebase_counter_ss_get_current_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value) for sw_timebase_counter_ss_get_target_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value) for sw_timebase_counter_ss_set_period_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_period_status_flag) for sw_timebase_counter_ss_set_period_status_flag
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_period_value_securely) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value_securely) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_remaining_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_current_value) for sw_timebase_counter_ss_get_current_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_remaining_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value) for sw_timebase_counter_ss_get_target_value
+    sw_timebase.o(.text.sw_timebase_counter_ss_get_remaining_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_period_value) for sw_timebase_counter_ss_get_period_value
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_remaining_period_value) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_remaining_period_value) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_period_value_expired) refers to sw_timebase.o(.text._period_ss_expired_condition) for _period_ss_expired_condition
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_period_value_expired) refers to sw_timebase.o(.text.sw_timebase_counter_ss_period_value_expired) for [Anonymous Symbol]
+    sw_timebase.o(.text._period_ss_expired_condition) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_remaining_period_value) for sw_timebase_counter_ss_get_remaining_period_value
+    sw_timebase.o(.text._period_ss_expired_condition) refers to sw_timebase.o(.text.sw_timebase_counter_ss_get_period_status_flag) for sw_timebase_counter_ss_get_period_status_flag
+    sw_timebase.o(.ARM.exidx.text._period_ss_expired_condition) refers to sw_timebase.o(.text._period_ss_expired_condition) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_period_value_expired_event) refers to sw_timebase.o(.text._period_ss_expired_condition) for _period_ss_expired_condition
+    sw_timebase.o(.text.sw_timebase_counter_ss_period_value_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_period_status_flag) for sw_timebase_counter_ss_set_period_status_flag
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_period_value_expired_event) refers to sw_timebase.o(.text.sw_timebase_counter_ss_period_value_expired_event) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_delay_subseconds) refers to sw_timebase.o(.text.sw_timebase_get_shadow_seconds_securely) for sw_timebase_get_shadow_seconds_securely
+    sw_timebase.o(.text.sw_timebase_counter_delay_subseconds) refers to sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_securely) for sw_timebase_get_shadow_sub_seconds_securely
+    sw_timebase.o(.text.sw_timebase_counter_delay_subseconds) refers to llmul.o(.text) for __aeabi_lmul
+    sw_timebase.o(.text.sw_timebase_counter_delay_subseconds) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_delay_subseconds) refers to sw_timebase.o(.text.sw_timebase_counter_delay_subseconds) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_update_all) refers to sw_timebase.o(.text.sw_timebase_counter_ss_update) for sw_timebase_counter_ss_update
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_update_all) refers to sw_timebase.o(.text.sw_timebase_counter_ss_update_all) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_counter_ss_reset_all) refers to sw_timebase.o(.text.sw_timebase_counter_ss_reset) for sw_timebase_counter_ss_reset
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_reset_all) refers to sw_timebase.o(.text.sw_timebase_counter_ss_reset_all) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_main_loop_executable) refers to sw_timebase.o(.text.sw_timebase_variable_sync) for sw_timebase_variable_sync
+    sw_timebase.o(.text.sw_timebase_main_loop_executable) refers to sw_timebase.o(.text.sw_timebase_counter_update_all) for sw_timebase_counter_update_all
+    sw_timebase.o(.text.sw_timebase_main_loop_executable) refers to sw_timebase.o(.text.sw_timebase_counter_ss_update_all) for sw_timebase_counter_ss_update_all
+    sw_timebase.o(.text.sw_timebase_main_loop_executable) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_main_loop_executable) refers to sw_timebase.o(.text.sw_timebase_main_loop_executable) for [Anonymous Symbol]
+    sw_timebase.o(.text.sw_timebase_variable_sync) refers to sw_timebase.o(.text.sw_timebase_atomic_operation_start) for sw_timebase_atomic_operation_start
+    sw_timebase.o(.text.sw_timebase_variable_sync) refers to sw_timebase.o(.text.sw_timebase_atomic_operation_end) for sw_timebase_atomic_operation_end
+    sw_timebase.o(.text.sw_timebase_variable_sync) refers to sw_timebase.o(.bss.sw_timebase) for sw_timebase
+    sw_timebase.o(.ARM.exidx.text.sw_timebase_variable_sync) refers to sw_timebase.o(.text.sw_timebase_variable_sync) for [Anonymous Symbol]
+    startup_stm32g030xx.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32g030xx.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32g030xx.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32g030xx.o(RESET) refers to startup_stm32g030xx.o(STACK) for __initial_sp
+    startup_stm32g030xx.o(RESET) refers to startup_stm32g030xx.o(.text) for Reset_Handler
+    startup_stm32g030xx.o(RESET) refers to debug.o(.text.TIM16_IRQHandler) for TIM16_IRQHandler
+    startup_stm32g030xx.o(RESET) refers to sw_timebase.o(.text.TIM17_IRQHandler) for TIM17_IRQHandler
+    startup_stm32g030xx.o(RESET) refers to debug.o(.text.USART2_IRQHandler) for USART2_IRQHandler
+    startup_stm32g030xx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32g030xx.o(.text) refers to system_stm32g0xx.o(.text.SystemInit) for SystemInit
+    startup_stm32g030xx.o(.text) refers to __main.o(!!!main) for __main
+    startup_stm32g030xx.o(.text) refers to startup_stm32g030xx.o(HEAP) for Heap_Mem
+    startup_stm32g030xx.o(.text) refers to startup_stm32g030xx.o(STACK) for Stack_Mem
+    system_stm32g0xx.o(.ARM.exidx.text.SystemInit) refers to system_stm32g0xx.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32g0xx.o(.text.SystemCoreClockUpdate) refers to aeabi_sdiv.o(.text) for __aeabi_uidiv
+    system_stm32g0xx.o(.text.SystemCoreClockUpdate) refers to system_stm32g0xx.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32g0xx.o(.text.SystemCoreClockUpdate) refers to system_stm32g0xx.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32g0xx.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32g0xx.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    aeabi_idiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(.text.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_stm32g030xx.o(.text) for __user_initial_stackheap
+    sys_stackheap_outer.o(__vectab_stack_and_reset_area) refers to tempstk.o(.text) for __temporary_stack_top
+    sys_stackheap_outer.o(__vectab_stack_and_reset_area) refers to __main.o(!!!main) for __main
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    defsig_fpe_outer.o(.text) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_fpe_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_fpe_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000034) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000006) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000010) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_relocate_pie_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000035) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000027) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$0000001A) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000028) refers to argv_veneer.o(.text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000029) refers to argv_veneer.o(.text) for __ARM_argv_veneer
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_exit_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_wrch_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_command_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing app.o(.text), (0 bytes).
+    Removing app.o(.ARM.exidx.text.JumpToApp), (8 bytes).
+    Removing app.o(.ARM.exidx.text.App_Setup), (8 bytes).
+    Removing app.o(.ARM.exidx.text.App_Main_Loop), (8 bytes).
+    Removing crc32.o(.text), (0 bytes).
+    Removing crc32.o(.text.CRC32_Init), (28 bytes).
+    Removing crc32.o(.ARM.exidx.text.CRC32_Init), (8 bytes).
+    Removing crc32.o(.text.CRC32_Calculate), (92 bytes).
+    Removing crc32.o(.ARM.exidx.text.CRC32_Calculate), (8 bytes).
+    Removing crc32.o(.text.CRC32_MemoryRange), (72 bytes).
+    Removing crc32.o(.ARM.exidx.text.CRC32_MemoryRange), (8 bytes).
+    Removing debug.o(.text), (0 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Struct_Init), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_GPIO_Init), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Reg_Init), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.__NVIC_SetPriority), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Timer_Init), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Timer_Enable), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Timer_Disable), (8 bytes).
+    Removing debug.o(.text.Debug_Get_Timer_Status), (12 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Get_Timer_Status), (8 bytes).
+    Removing debug.o(.text.Debug_Get_Counter_Val), (12 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Get_Counter_Val), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Counter_Reset), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.TIM16_IRQHandler), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Get_Buf_Index), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Byte), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Rx_Byte), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.USART2_IRQHandler), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Buf), (60 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Buf), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_NL), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_SP), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_CM), (10 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_CM), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Text), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Text_NL), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Text_NL), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Text_SP), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Text_SP), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Text_CM), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Text_CM), (8 bytes).
+    Removing debug.o(.text.Debug_Determine_Digit_Numbers), (112 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Determine_Digit_Numbers), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number_Digits), (84 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_Digits), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number), (42 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_Hex), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number_Bin), (128 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_Bin), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number_NL), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_NL), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number_SP), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_SP), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number_CM), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_CM), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_Hex_NL), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number_Hex_SP), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_Hex_SP), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number_Hex_CM), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_Hex_CM), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number_Bin_NL), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_Bin_NL), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number_Bin_SP), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_Bin_SP), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Number_Bin_CM), (20 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Number_Bin_CM), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Parameter_NL), (28 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Parameter_NL), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Parameter_SP), (28 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Parameter_SP), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Parameter_CM), (28 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Parameter_CM), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Hex_NL), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Parameter_Hex_SP), (28 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Hex_SP), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Parameter_Hex_CM), (28 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Hex_CM), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Parameter_Bin_NL), (28 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Bin_NL), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Parameter_Bin_SP), (28 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Bin_SP), (8 bytes).
+    Removing debug.o(.text.Debug_Tx_Parameter_Bin_CM), (28 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Tx_Parameter_Bin_CM), (8 bytes).
+    Removing debug.o(.text.Debug_Flush_Buf), (60 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Flush_Buf), (8 bytes).
+    Removing debug.o(.text.Debug_Get_Buf), (24 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Get_Buf), (8 bytes).
+    Removing debug.o(.text.Debug_Get_Data_Available_Flag), (12 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Get_Data_Available_Flag), (8 bytes).
+    Removing debug.o(.text.Debug_Data_Available), (12 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Data_Available), (8 bytes).
+    Removing debug.o(.text.Debug_Clear_Data_Available_Flag), (16 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Clear_Data_Available_Flag), (8 bytes).
+    Removing debug.o(.text.Debug_Get_Data_Len), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Get_Data_Len), (8 bytes).
+    Removing debug.o(.text.Debug_Data_Copy_Buf), (68 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Data_Copy_Buf), (8 bytes).
+    Removing debug.o(.text.Debug_Print_Buf_Data), (76 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Print_Buf_Data), (8 bytes).
+    Removing debug.o(.ARM.exidx.text.Debug_Init), (8 bytes).
+    Removing flash.o(.text), (0 bytes).
+    Removing flash.o(.text.flash_erase_page), (112 bytes).
+    Removing flash.o(.ARM.exidx.text.flash_erase_page), (8 bytes).
+    Removing flash.o(.text.flash_wait_busy), (24 bytes).
+    Removing flash.o(.ARM.exidx.text.flash_wait_busy), (8 bytes).
+    Removing flash.o(.text.flash_clear_flags), (20 bytes).
+    Removing flash.o(.ARM.exidx.text.flash_clear_flags), (8 bytes).
+    Removing flash.o(.text.flash_unlock), (44 bytes).
+    Removing flash.o(.ARM.exidx.text.flash_unlock), (8 bytes).
+    Removing flash.o(.text.flash_lock), (20 bytes).
+    Removing flash.o(.ARM.exidx.text.flash_lock), (8 bytes).
+    Removing flash.o(.text.flash_erase_page_by_number), (104 bytes).
+    Removing flash.o(.ARM.exidx.text.flash_erase_page_by_number), (8 bytes).
+    Removing flash.o(.text.flash_write_word), (76 bytes).
+    Removing flash.o(.ARM.exidx.text.flash_write_word), (8 bytes).
+    Removing flash.o(.text.flash_erase_full_pages), (46 bytes).
+    Removing flash.o(.ARM.exidx.text.flash_erase_full_pages), (8 bytes).
+    Removing flash.o(.text.flash_get_page_address), (18 bytes).
+    Removing flash.o(.ARM.exidx.text.flash_get_page_address), (8 bytes).
+    Removing gpio.o(.text), (0 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_Init), (8 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_SetPin), (8 bytes).
+    Removing gpio.o(.text.GPIO_ResetPin), (24 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_ResetPin), (8 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_TogglePin), (8 bytes).
+    Removing gpio.o(.text.GPIO_ReadPin), (30 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_ReadPin), (8 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing sw_timebase.o(.text), (0 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_struct_init), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_enable), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.__NVIC_SetPriority), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_Init), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_disable), (10 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_disable), (8 bytes).
+    Removing sw_timebase.o(.text.sw_hardware_timer_disable), (16 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_hardware_timer_disable), (8 bytes).
+    Removing sw_timebase.o(.text.sw_hardware_timer_reset), (28 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_hardware_timer_reset), (8 bytes).
+    Removing sw_timebase.o(.text.sw_hardware_timer_interrupt_enable), (24 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_hardware_timer_interrupt_enable), (8 bytes).
+    Removing sw_timebase.o(.text.sw_hardware_timer_interrupt_disable), (24 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_hardware_timer_interrupt_disable), (8 bytes).
+    Removing sw_timebase.o(.text.__NVIC_DisableIRQ), (52 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.__NVIC_DisableIRQ), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_atomic_operation_start), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_atomic_operation_end), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.TIM17_IRQHandler), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_ISR_executables), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_get_sub_seconds), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds), (12 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_sub_seconds), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_get_seconds), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_get_shadow_seconds), (12 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_seconds), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_uptime), (16 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_sub_seconds_uptime), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_set_sub_seconds), (24 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_set_sub_seconds), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_set_shadow_sub_seconds), (32 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_set_shadow_sub_seconds), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_set_seconds), (20 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_set_seconds), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_set_shadow_seconds), (32 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_set_shadow_seconds), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_set_shadow_sub_seconds_uptime), (36 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_set_shadow_sub_seconds_uptime), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_securely), (48 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_sub_seconds_securely), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_get_shadow_seconds_securely), (44 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_seconds_securely), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_get_shadow_sub_seconds_uptime_securely), (64 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_get_shadow_sub_seconds_uptime_securely), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_status), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_status), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_get_period_status_flag), (36 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_period_status_flag), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_set_period_status_flag), (52 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_period_status_flag), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_reset_period_status_flag), (36 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_reset_period_status_flag), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_current_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_current_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_end_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_end_value), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_get_period_value), (28 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_period_value), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_set_period_value), (32 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_period_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_reload_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_reload_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_target_value), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_set_target_value), (32 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_target_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_temporary_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_temporary_value), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_reset), (94 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_reset), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_clear_flag), (20 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_clear_flag), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_start), (38 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_start), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_stop), (38 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_stop), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_set_securely), (106 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_securely), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_set_forcefully), (34 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_forcefully), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_update), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_expired), (46 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_expired), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_expired_event), (54 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_expired_event), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_oneshot_expired_event), (20 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_oneshot_expired_event), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_continous_expired_event), (78 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_continous_expired_event), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_set_period_value_securely), (112 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_set_period_value_securely), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_get_remaining_period_value), (94 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_get_remaining_period_value), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_period_value_expired), (24 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_period_value_expired), (8 bytes).
+    Removing sw_timebase.o(.text._period_expired_condition), (56 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text._period_expired_condition), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_period_value_expired_event), (56 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_period_value_expired_event), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_delay_seconds), (140 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_delay_seconds), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_update_all), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_reset_all), (46 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_reset_all), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_status), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_status), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_get_period_status_flag), (36 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_period_status_flag), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_set_period_status_flag), (52 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_period_status_flag), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_reset_period_status_flag), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_get_current_value), (32 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_current_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_current_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_end_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_end_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_end_value_sub_sec), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_end_value_sub_sec), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_get_period_value), (32 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_period_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_period_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_reload_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_reload_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_target_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_target_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_temporary_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_temporary_value), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_reset), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_clear_flag), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_start), (38 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_start), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_stop), (38 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_stop), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_securely), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_set_forcefully), (34 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_forcefully), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_update), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_expired), (46 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_expired), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_expired_event), (54 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_expired_event), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_oneshot_expired_event), (20 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_oneshot_expired_event), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_continous_expired_event), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value_securely), (112 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_set_period_value_securely), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_get_remaining_period_value), (94 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_get_remaining_period_value), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_period_value_expired), (24 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_period_value_expired), (8 bytes).
+    Removing sw_timebase.o(.text._period_ss_expired_condition), (56 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text._period_ss_expired_condition), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_period_value_expired_event), (56 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_period_value_expired_event), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_delay_subseconds), (164 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_delay_subseconds), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_update_all), (8 bytes).
+    Removing sw_timebase.o(.text.sw_timebase_counter_ss_reset_all), (46 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_counter_ss_reset_all), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_main_loop_executable), (8 bytes).
+    Removing sw_timebase.o(.ARM.exidx.text.sw_timebase_variable_sync), (8 bytes).
+    Removing system_stm32g0xx.o(.text), (0 bytes).
+    Removing system_stm32g0xx.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_stm32g0xx.o(.text.SystemCoreClockUpdate), (380 bytes).
+    Removing system_stm32g0xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_stm32g0xx.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_stm32g0xx.o(.rodata.AHBPrescTable), (64 bytes).
+    Removing system_stm32g0xx.o(.rodata.APBPrescTable), (32 bytes).
+
+302 unused section(s) (total 6538 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatterp.s                 0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  tempstk.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command_hlt.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv_div0.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/longlong.c                       0x00000000   Number         0  llmul.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/cfplib/fpinit.c                 0x00000000   Number         0  fpinit.o ABSOLUTE
+    RTE/Device/STM32G030F6Px/startup_stm32g030xx.s 0x00000000   Number         0  startup_stm32g030xx.o ABSOLUTE
+    app.c                                    0x00000000   Number         0  app.o ABSOLUTE
+    crc32.c                                  0x00000000   Number         0  crc32.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    debug.c                                  0x00000000   Number         0  debug.o ABSOLUTE
+    flash.c                                  0x00000000   Number         0  flash.o ABSOLUTE
+    gpio.c                                   0x00000000   Number         0  gpio.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    sw_timebase.c                            0x00000000   Number         0  sw_timebase.o ABSOLUTE
+    system_stm32g0xx.c                       0x00000000   Number         0  system_stm32g0xx.o ABSOLUTE
+    RESET                                    0x08000000   Section      192  startup_stm32g030xx.o(RESET)
+    !!!main                                  0x080000c0   Section        8  __main.o(!!!main)
+    !!!scatter                               0x080000c8   Section       84  __scatter.o(!!!scatter)
+    !!handler_null                           0x0800011c   Section        2  __scatter.o(!!handler_null)
+    !!handler_zi                             0x08000120   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x0800013c   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$00000006          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000006)
+    .ARM.Collect$$libinit$$0000000C          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000010          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000010)
+    .ARM.Collect$$libinit$$00000013          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$00000027          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000027)
+    .ARM.Collect$$libinit$$0000002E          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000034          0x0800013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000034)
+    .ARM.Collect$$libinit$$00000035          0x0800013e   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000035)
+    .ARM.Collect$$libshutdown$$00000000      0x08000140   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x08000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x08000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x08000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x08000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x08000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x08000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x08000142   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x08000144   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x08000144   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x08000144   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x0800014a   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x0800014a   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x0800014e   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x0800014e   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x08000156   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x08000158   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x08000158   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x0800015c   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x08000164   Section       56  startup_stm32g030xx.o(.text)
+    .text                                    0x0800019c   Section      364  aeabi_sdiv.o(.text)
+    .text                                    0x08000308   Section        0  heapauxi.o(.text)
+    .text                                    0x0800030e   Section       62  sys_stackheap_outer.o(.text)
+    .text                                    0x0800034c   Section        0  exit.o(.text)
+    .text                                    0x0800035c   Section        8  libspace.o(.text)
+    .text                                    0x08000364   Section        0  sys_exit.o(.text)
+    .text                                    0x08000370   Section        2  use_no_semi.o(.text)
+    [Anonymous Symbol]                       0x08000372   Section        0  app.o(.text.App_Main_Loop)
+    .text                                    0x08000372   Section        0  indicate_semi.o(.text)
+    [Anonymous Symbol]                       0x080003a4   Section        0  app.o(.text.App_Setup)
+    __arm_cp.1_1                             0x080003f8   Number         4  app.o(.text.App_Setup)
+    [Anonymous Symbol]                       0x080003fc   Section        0  debug.o(.text.Debug_Counter_Reset)
+    __arm_cp.10_0                            0x08000404   Number         4  debug.o(.text.Debug_Counter_Reset)
+    [Anonymous Symbol]                       0x08000408   Section        0  debug.o(.text.Debug_GPIO_Init)
+    __arm_cp.1_0                             0x08000490   Number         4  debug.o(.text.Debug_GPIO_Init)
+    __arm_cp.1_1                             0x08000494   Number         4  debug.o(.text.Debug_GPIO_Init)
+    __arm_cp.1_2                             0x08000498   Number         4  debug.o(.text.Debug_GPIO_Init)
+    [Anonymous Symbol]                       0x0800049c   Section        0  debug.o(.text.Debug_Get_Buf_Index)
+    [Anonymous Symbol]                       0x080004a4   Section        0  debug.o(.text.Debug_Init)
+    [Anonymous Symbol]                       0x080004c0   Section        0  debug.o(.text.Debug_Reg_Init)
+    __arm_cp.2_0                             0x08000528   Number         4  debug.o(.text.Debug_Reg_Init)
+    __arm_cp.2_1                             0x0800052c   Number         4  debug.o(.text.Debug_Reg_Init)
+    __arm_cp.2_2                             0x08000530   Number         4  debug.o(.text.Debug_Reg_Init)
+    __arm_cp.2_3                             0x08000534   Number         4  debug.o(.text.Debug_Reg_Init)
+    [Anonymous Symbol]                       0x08000538   Section        0  debug.o(.text.Debug_Rx_Byte)
+    __arm_cp.14_0                            0x08000548   Number         4  debug.o(.text.Debug_Rx_Byte)
+    [Anonymous Symbol]                       0x0800054c   Section        0  debug.o(.text.Debug_Struct_Init)
+    [Anonymous Symbol]                       0x080005c4   Section        0  debug.o(.text.Debug_Timer_Disable)
+    [Anonymous Symbol]                       0x080005d8   Section        0  debug.o(.text.Debug_Timer_Enable)
+    __arm_cp.6_1                             0x080005ec   Number         4  debug.o(.text.Debug_Timer_Enable)
+    [Anonymous Symbol]                       0x080005f0   Section        0  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_0                             0x08000650   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_1                             0x08000654   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_2                             0x08000658   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_3                             0x0800065c   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_4                             0x08000660   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_5                             0x08000664   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_6                             0x08000668   Number         4  debug.o(.text.Debug_Timer_Init)
+    [Anonymous Symbol]                       0x0800066c   Section        0  debug.o(.text.Debug_Tx_Byte)
+    __arm_cp.13_0                            0x0800069c   Number         4  debug.o(.text.Debug_Tx_Byte)
+    __arm_cp.13_1                            0x080006a0   Number         4  debug.o(.text.Debug_Tx_Byte)
+    __arm_cp.13_2                            0x080006a4   Number         4  debug.o(.text.Debug_Tx_Byte)
+    [Anonymous Symbol]                       0x080006a8   Section        0  debug.o(.text.Debug_Tx_NL)
+    [Anonymous Symbol]                       0x080006b8   Section        0  debug.o(.text.Debug_Tx_Number_Hex)
+    [Anonymous Symbol]                       0x08000772   Section        0  debug.o(.text.Debug_Tx_Number_Hex_NL)
+    [Anonymous Symbol]                       0x08000786   Section        0  debug.o(.text.Debug_Tx_Parameter_Hex_NL)
+    [Anonymous Symbol]                       0x080007a2   Section        0  debug.o(.text.Debug_Tx_SP)
+    [Anonymous Symbol]                       0x080007ac   Section        0  debug.o(.text.Debug_Tx_Text)
+    [Anonymous Symbol]                       0x080007e4   Section        0  gpio.o(.text.GPIO_Init)
+    [Anonymous Symbol]                       0x080008c2   Section        0  gpio.o(.text.GPIO_SetPin)
+    [Anonymous Symbol]                       0x080008d8   Section        0  gpio.o(.text.GPIO_TogglePin)
+    [Anonymous Symbol]                       0x080008f4   Section        0  app.o(.text.JumpToApp)
+    __arm_cp.0_0                             0x080009ac   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_1                             0x080009b0   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_2                             0x080009b4   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_3                             0x080009b8   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_4                             0x080009bc   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_5                             0x080009c0   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_6                             0x080009c4   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_7                             0x080009c8   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_8                             0x080009cc   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_9                             0x080009d0   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_10                            0x080009d4   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_11                            0x080009d8   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_12                            0x080009dc   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_13                            0x080009e0   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_14                            0x080009e4   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_15                            0x080009e8   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_16                            0x080009ec   Number         4  app.o(.text.JumpToApp)
+    __arm_cp.0_17                            0x080009f0   Number         4  app.o(.text.JumpToApp)
+    [Anonymous Symbol]                       0x080009f4   Section        0  system_stm32g0xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x080009f8   Section        0  debug.o(.text.TIM16_IRQHandler)
+    __arm_cp.11_1                            0x08000a38   Number         4  debug.o(.text.TIM16_IRQHandler)
+    [Anonymous Symbol]                       0x08000a3c   Section        0  sw_timebase.o(.text.TIM17_IRQHandler)
+    __arm_cp.13_0                            0x08000a5c   Number         4  sw_timebase.o(.text.TIM17_IRQHandler)
+    [Anonymous Symbol]                       0x08000a60   Section        0  debug.o(.text.USART2_IRQHandler)
+    __arm_cp.15_0                            0x08000ab4   Number         4  debug.o(.text.USART2_IRQHandler)
+    __arm_cp.15_1                            0x08000ab8   Number         4  debug.o(.text.USART2_IRQHandler)
+    __NVIC_EnableIRQ                         0x08000abd   Thumb Code    40  debug.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x08000abc   Section        0  debug.o(.text.__NVIC_EnableIRQ)
+    __NVIC_EnableIRQ                         0x08000ae5   Thumb Code    40  sw_timebase.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x08000ae4   Section        0  sw_timebase.o(.text.__NVIC_EnableIRQ)
+    __arm_cp.3_0                             0x08000b0c   Number         4  sw_timebase.o(.text.__NVIC_EnableIRQ)
+    __NVIC_SetPriority                       0x08000b11   Thumb Code   124  debug.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08000b10   Section        0  debug.o(.text.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x08000b8d   Thumb Code   124  sw_timebase.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08000b8c   Section        0  sw_timebase.o(.text.__NVIC_SetPriority)
+    __arm_cp.2_0                             0x08000c08   Number         4  sw_timebase.o(.text.__NVIC_SetPriority)
+    __arm_cp.2_1                             0x08000c0c   Number         4  sw_timebase.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08000c10   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x08000c24   Section        0  sw_timebase.o(.text.sw_timebase_ISR_executables)
+    [Anonymous Symbol]                       0x08000c70   Section        0  sw_timebase.o(.text.sw_timebase_Init)
+    [Anonymous Symbol]                       0x08000c84   Section        0  sw_timebase.o(.text.sw_timebase_atomic_operation_end)
+    [Anonymous Symbol]                       0x08000c88   Section        0  sw_timebase.o(.text.sw_timebase_atomic_operation_start)
+    [Anonymous Symbol]                       0x08000c8c   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_current_value)
+    [Anonymous Symbol]                       0x08000ca4   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_end_value)
+    [Anonymous Symbol]                       0x08000cbc   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_reload_value)
+    [Anonymous Symbol]                       0x08000cd4   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_status)
+    [Anonymous Symbol]                       0x08000cf4   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_target_value)
+    [Anonymous Symbol]                       0x08000d0c   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_temporary_value)
+    [Anonymous Symbol]                       0x08000d24   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_current_value)
+    [Anonymous Symbol]                       0x08000d40   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_end_value)
+    [Anonymous Symbol]                       0x08000d5c   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_reload_value)
+    [Anonymous Symbol]                       0x08000d78   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_status)
+    [Anonymous Symbol]                       0x08000dac   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_temporary_value)
+    [Anonymous Symbol]                       0x08000dc8   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_clear_flag)
+    [Anonymous Symbol]                       0x08000ddc   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event)
+    [Anonymous Symbol]                       0x08000e2c   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value)
+    [Anonymous Symbol]                       0x08000e48   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value_sub_sec)
+    [Anonymous Symbol]                       0x08000e64   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_reload_value)
+    [Anonymous Symbol]                       0x08000e80   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_status)
+    [Anonymous Symbol]                       0x08000ea0   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value)
+    [Anonymous Symbol]                       0x08000ebc   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_temporary_value)
+    [Anonymous Symbol]                       0x08000ed8   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_reset)
+    [Anonymous Symbol]                       0x08000f38   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_reset_period_status_flag)
+    [Anonymous Symbol]                       0x08000f58   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value)
+    [Anonymous Symbol]                       0x08000f78   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value)
+    [Anonymous Symbol]                       0x08000f98   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec)
+    __arm_cp.74_0                            0x08000fb8   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec)
+    [Anonymous Symbol]                       0x08000fbc   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value)
+    __arm_cp.76_0                            0x08000fdc   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value)
+    [Anonymous Symbol]                       0x08000fe0   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value)
+    __arm_cp.78_0                            0x08001000   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value)
+    [Anonymous Symbol]                       0x08001004   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_securely)
+    __arm_cp.87_0                            0x080010d0   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_securely)
+    [Anonymous Symbol]                       0x080010d4   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_status)
+    __arm_cp.65_0                            0x08001108   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_status)
+    [Anonymous Symbol]                       0x0800110c   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value)
+    __arm_cp.80_0                            0x0800112c   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value)
+    [Anonymous Symbol]                       0x08001130   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value)
+    __arm_cp.82_0                            0x08001150   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value)
+    [Anonymous Symbol]                       0x08001154   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_update)
+    __arm_cp.89_0                            0x080012e0   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_update)
+    [Anonymous Symbol]                       0x080012e4   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_update_all)
+    [Anonymous Symbol]                       0x08001312   Section        0  sw_timebase.o(.text.sw_timebase_counter_update)
+    [Anonymous Symbol]                       0x08001450   Section        0  sw_timebase.o(.text.sw_timebase_counter_update_all)
+    [Anonymous Symbol]                       0x08001480   Section        0  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_0                             0x080014e4   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_1                             0x080014e8   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_2                             0x080014ec   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_3                             0x080014f0   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_4                             0x080014f4   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_5                             0x080014f8   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    [Anonymous Symbol]                       0x080014fc   Section        0  sw_timebase.o(.text.sw_timebase_get_seconds)
+    [Anonymous Symbol]                       0x08001504   Section        0  sw_timebase.o(.text.sw_timebase_get_sub_seconds)
+    __arm_cp.15_0                            0x0800150c   Number         4  sw_timebase.o(.text.sw_timebase_get_sub_seconds)
+    [Anonymous Symbol]                       0x08001510   Section        0  sw_timebase.o(.text.sw_timebase_main_loop_executable)
+    __arm_cp.102_0                           0x0800154c   Number         4  sw_timebase.o(.text.sw_timebase_main_loop_executable)
+    [Anonymous Symbol]                       0x08001550   Section        0  sw_timebase.o(.text.sw_timebase_struct_init)
+    __arm_cp.0_1                             0x0800168c   Number         4  sw_timebase.o(.text.sw_timebase_struct_init)
+    [Anonymous Symbol]                       0x08001690   Section        0  sw_timebase.o(.text.sw_timebase_variable_sync)
+    __arm_cp.103_0                           0x080016d0   Number         4  sw_timebase.o(.text.sw_timebase_variable_sync)
+    [Anonymous Symbol]                       0x080016d4   Section        0  app.o(.rodata.str1.1)
+    .bss                                     0x20000000   Section       96  libspace.o(.bss)
+    Heap_Mem                                 0x20000700   Data         512  startup_stm32g030xx.o(HEAP)
+    HEAP                                     0x20000700   Section      512  startup_stm32g030xx.o(HEAP)
+    Stack_Mem                                0x20000900   Data        1024  startup_stm32g030xx.o(STACK)
+    STACK                                    0x20000900   Section     1024  startup_stm32g030xx.o(STACK)
+    __initial_sp                             0x20000d00   Data           0  startup_stm32g030xx.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __arm_relocate_pie_                       - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_Size                           0x000000c0   Number         0  startup_stm32g030xx.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32g030xx.o(RESET)
+    __Vectors_End                            0x080000c0   Data           0  startup_stm32g030xx.o(RESET)
+    __main                                   0x080000c1   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x080000c9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x080000c9   Thumb Code    74  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x080000c9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_loop                       0x080000d3   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x0800011d   Thumb Code     2  __scatter.o(!!handler_null)
+    __scatterload_zeroinit                   0x08000121   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x0800013d   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_argv_1                     0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_atexit_1                   0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_clock_1                    0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_cpp_1                      0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000034)
+    __rt_lib_init_exceptions_1               0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_fp_1                       0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_getenv_1                   0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_heap_1                     0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_init_lc_collate_1               0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_ctype_1                 0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_monetary_1              0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_numeric_1               0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_lc_time_1                  0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_preinit_1                  0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000006)
+    __rt_lib_init_rand_1                     0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000010)
+    __rt_lib_init_relocate_pie_1             0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_return                     0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000035)
+    __rt_lib_init_signal_1                   0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_stdio_1                    0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000027)
+    __rt_lib_init_user_alloc_1               0x0800013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_shutdown                        0x08000141   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x08000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x08000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x08000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x08000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x08000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x08000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x08000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x08000145   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x08000145   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x08000145   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x0800014b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x0800014b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x0800014f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x0800014f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x08000157   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x08000159   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x08000159   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x0800015d   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x08000165   Thumb Code     8  startup_stm32g030xx.o(.text)
+    NMI_Handler                              0x0800016d   Thumb Code     2  startup_stm32g030xx.o(.text)
+    HardFault_Handler                        0x0800016f   Thumb Code     2  startup_stm32g030xx.o(.text)
+    SVC_Handler                              0x08000171   Thumb Code     2  startup_stm32g030xx.o(.text)
+    PendSV_Handler                           0x08000173   Thumb Code     2  startup_stm32g030xx.o(.text)
+    SysTick_Handler                          0x08000175   Thumb Code     2  startup_stm32g030xx.o(.text)
+    ADC1_IRQHandler                          0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    DMA1_Ch4_5_DMAMUX1_OVR_IRQHandler        0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    DMA1_Channel1_IRQHandler                 0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    DMA1_Channel2_3_IRQHandler               0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    EXTI0_1_IRQHandler                       0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    EXTI2_3_IRQHandler                       0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    EXTI4_15_IRQHandler                      0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    FLASH_IRQHandler                         0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    I2C1_IRQHandler                          0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    I2C2_IRQHandler                          0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    RCC_IRQHandler                           0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    RTC_TAMP_IRQHandler                      0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    SPI1_IRQHandler                          0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    SPI2_IRQHandler                          0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    TIM14_IRQHandler                         0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    TIM1_BRK_UP_TRG_COM_IRQHandler           0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    TIM1_CC_IRQHandler                       0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    TIM3_IRQHandler                          0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    USART1_IRQHandler                        0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    WWDG_IRQHandler                          0x08000177   Thumb Code     0  startup_stm32g030xx.o(.text)
+    __user_initial_stackheap                 0x08000179   Thumb Code     0  startup_stm32g030xx.o(.text)
+    __aeabi_uidiv                            0x0800019d   Thumb Code     0  aeabi_sdiv.o(.text)
+    __aeabi_uidivmod                         0x0800019d   Thumb Code    20  aeabi_sdiv.o(.text)
+    __aeabi_idiv                             0x080001b1   Thumb Code     0  aeabi_sdiv.o(.text)
+    __aeabi_idivmod                          0x080001b1   Thumb Code   338  aeabi_sdiv.o(.text)
+    __use_two_region_memory                  0x08000309   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x0800030b   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x0800030d   Thumb Code     2  heapauxi.o(.text)
+    __user_setup_stackheap                   0x0800030f   Thumb Code    62  sys_stackheap_outer.o(.text)
+    exit                                     0x0800034d   Thumb Code    16  exit.o(.text)
+    __user_libspace                          0x0800035d   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x0800035d   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x0800035d   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x08000365   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x08000371   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x08000371   Thumb Code     2  use_no_semi.o(.text)
+    App_Main_Loop                            0x08000373   Thumb Code    50  app.o(.text.App_Main_Loop)
+    __semihosting_library_function           0x08000373   Thumb Code     0  indicate_semi.o(.text)
+    App_Setup                                0x080003a5   Thumb Code    84  app.o(.text.App_Setup)
+    Debug_Counter_Reset                      0x080003fd   Thumb Code     8  debug.o(.text.Debug_Counter_Reset)
+    Debug_GPIO_Init                          0x08000409   Thumb Code   136  debug.o(.text.Debug_GPIO_Init)
+    Debug_Get_Buf_Index                      0x0800049d   Thumb Code     8  debug.o(.text.Debug_Get_Buf_Index)
+    Debug_Init                               0x080004a5   Thumb Code    28  debug.o(.text.Debug_Init)
+    Debug_Reg_Init                           0x080004c1   Thumb Code   104  debug.o(.text.Debug_Reg_Init)
+    Debug_Rx_Byte                            0x08000539   Thumb Code    16  debug.o(.text.Debug_Rx_Byte)
+    Debug_Struct_Init                        0x0800054d   Thumb Code   120  debug.o(.text.Debug_Struct_Init)
+    Debug_Timer_Disable                      0x080005c5   Thumb Code    20  debug.o(.text.Debug_Timer_Disable)
+    Debug_Timer_Enable                       0x080005d9   Thumb Code    20  debug.o(.text.Debug_Timer_Enable)
+    Debug_Timer_Init                         0x080005f1   Thumb Code    96  debug.o(.text.Debug_Timer_Init)
+    Debug_Tx_Byte                            0x0800066d   Thumb Code    48  debug.o(.text.Debug_Tx_Byte)
+    Debug_Tx_NL                              0x080006a9   Thumb Code    16  debug.o(.text.Debug_Tx_NL)
+    Debug_Tx_Number_Hex                      0x080006b9   Thumb Code   186  debug.o(.text.Debug_Tx_Number_Hex)
+    Debug_Tx_Number_Hex_NL                   0x08000773   Thumb Code    20  debug.o(.text.Debug_Tx_Number_Hex_NL)
+    Debug_Tx_Parameter_Hex_NL                0x08000787   Thumb Code    28  debug.o(.text.Debug_Tx_Parameter_Hex_NL)
+    Debug_Tx_SP                              0x080007a3   Thumb Code    10  debug.o(.text.Debug_Tx_SP)
+    Debug_Tx_Text                            0x080007ad   Thumb Code    56  debug.o(.text.Debug_Tx_Text)
+    GPIO_Init                                0x080007e5   Thumb Code   222  gpio.o(.text.GPIO_Init)
+    GPIO_SetPin                              0x080008c3   Thumb Code    22  gpio.o(.text.GPIO_SetPin)
+    GPIO_TogglePin                           0x080008d9   Thumb Code    26  gpio.o(.text.GPIO_TogglePin)
+    JumpToApp                                0x080008f5   Thumb Code   184  app.o(.text.JumpToApp)
+    SystemInit                               0x080009f5   Thumb Code     2  system_stm32g0xx.o(.text.SystemInit)
+    TIM16_IRQHandler                         0x080009f9   Thumb Code    64  debug.o(.text.TIM16_IRQHandler)
+    TIM17_IRQHandler                         0x08000a3d   Thumb Code    32  sw_timebase.o(.text.TIM17_IRQHandler)
+    USART2_IRQHandler                        0x08000a61   Thumb Code    84  debug.o(.text.USART2_IRQHandler)
+    main                                     0x08000c11   Thumb Code    20  main.o(.text.main)
+    sw_timebase_ISR_executables              0x08000c25   Thumb Code    76  sw_timebase.o(.text.sw_timebase_ISR_executables)
+    sw_timebase_Init                         0x08000c71   Thumb Code    20  sw_timebase.o(.text.sw_timebase_Init)
+    sw_timebase_atomic_operation_end         0x08000c85   Thumb Code     4  sw_timebase.o(.text.sw_timebase_atomic_operation_end)
+    sw_timebase_atomic_operation_start       0x08000c89   Thumb Code     4  sw_timebase.o(.text.sw_timebase_atomic_operation_start)
+    sw_timebase_counter_get_current_value    0x08000c8d   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_current_value)
+    sw_timebase_counter_get_end_value        0x08000ca5   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_end_value)
+    sw_timebase_counter_get_reload_value     0x08000cbd   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_reload_value)
+    sw_timebase_counter_get_status           0x08000cd5   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_get_status)
+    sw_timebase_counter_get_target_value     0x08000cf5   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_target_value)
+    sw_timebase_counter_get_temporary_value  0x08000d0d   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_temporary_value)
+    sw_timebase_counter_set_current_value    0x08000d25   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_current_value)
+    sw_timebase_counter_set_end_value        0x08000d41   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_end_value)
+    sw_timebase_counter_set_reload_value     0x08000d5d   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_reload_value)
+    sw_timebase_counter_set_status           0x08000d79   Thumb Code    52  sw_timebase.o(.text.sw_timebase_counter_set_status)
+    sw_timebase_counter_set_temporary_value  0x08000dad   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_temporary_value)
+    sw_timebase_counter_ss_clear_flag        0x08000dc9   Thumb Code    20  sw_timebase.o(.text.sw_timebase_counter_ss_clear_flag)
+    sw_timebase_counter_ss_continous_expired_event 0x08000ddd   Thumb Code    78  sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event)
+    sw_timebase_counter_ss_get_end_value     0x08000e2d   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value)
+    sw_timebase_counter_ss_get_end_value_sub_sec 0x08000e49   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value_sub_sec)
+    sw_timebase_counter_ss_get_reload_value  0x08000e65   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_reload_value)
+    sw_timebase_counter_ss_get_status        0x08000e81   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_get_status)
+    sw_timebase_counter_ss_get_target_value  0x08000ea1   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value)
+    sw_timebase_counter_ss_get_temporary_value 0x08000ebd   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_temporary_value)
+    sw_timebase_counter_ss_reset             0x08000ed9   Thumb Code    94  sw_timebase.o(.text.sw_timebase_counter_ss_reset)
+    sw_timebase_counter_ss_reset_period_status_flag 0x08000f39   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_reset_period_status_flag)
+    sw_timebase_counter_ss_set_current_value 0x08000f59   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value)
+    sw_timebase_counter_ss_set_end_value     0x08000f79   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value)
+    sw_timebase_counter_ss_set_end_value_sub_sec 0x08000f99   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec)
+    sw_timebase_counter_ss_set_period_value  0x08000fbd   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value)
+    sw_timebase_counter_ss_set_reload_value  0x08000fe1   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value)
+    sw_timebase_counter_ss_set_securely      0x08001005   Thumb Code   204  sw_timebase.o(.text.sw_timebase_counter_ss_set_securely)
+    sw_timebase_counter_ss_set_status        0x080010d5   Thumb Code    52  sw_timebase.o(.text.sw_timebase_counter_ss_set_status)
+    sw_timebase_counter_ss_set_target_value  0x0800110d   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value)
+    sw_timebase_counter_ss_set_temporary_value 0x08001131   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value)
+    sw_timebase_counter_ss_update            0x08001155   Thumb Code   396  sw_timebase.o(.text.sw_timebase_counter_ss_update)
+    sw_timebase_counter_ss_update_all        0x080012e5   Thumb Code    46  sw_timebase.o(.text.sw_timebase_counter_ss_update_all)
+    sw_timebase_counter_update               0x08001313   Thumb Code   318  sw_timebase.o(.text.sw_timebase_counter_update)
+    sw_timebase_counter_update_all           0x08001451   Thumb Code    46  sw_timebase.o(.text.sw_timebase_counter_update_all)
+    sw_timebase_enable                       0x08001481   Thumb Code   100  sw_timebase.o(.text.sw_timebase_enable)
+    sw_timebase_get_seconds                  0x080014fd   Thumb Code     8  sw_timebase.o(.text.sw_timebase_get_seconds)
+    sw_timebase_get_sub_seconds              0x08001505   Thumb Code     8  sw_timebase.o(.text.sw_timebase_get_sub_seconds)
+    sw_timebase_main_loop_executable         0x08001511   Thumb Code    60  sw_timebase.o(.text.sw_timebase_main_loop_executable)
+    sw_timebase_struct_init                  0x08001551   Thumb Code   316  sw_timebase.o(.text.sw_timebase_struct_init)
+    sw_timebase_variable_sync                0x08001691   Thumb Code    64  sw_timebase.o(.text.sw_timebase_variable_sync)
+    Region$$Table$$Base                      0x0800172c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800173c   Number         0  anon$$obj.o(Region$$Table)
+    __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
+    Debug                                    0x20000060   Data         141  debug.o(.bss.Debug)
+    __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
+    sw_timebase                              0x200000f0   Data           4  sw_timebase.o(.bss.sw_timebase)
+    sw_timebase_type                         0x200000f8   Data        1544  sw_timebase.o(.bss.sw_timebase_type)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080000c1
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000173c, Max: 0x00002000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000173c, Max: 0x00002000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000c0   Data   RO          418    RESET               startup_stm32g030xx.o
+    0x080000c0   0x080000c0   0x00000008   Code   RO          449  * !!!main             c_p.l(__main.o)
+    0x080000c8   0x080000c8   0x00000054   Code   RO          626    !!!scatter          c_p.l(__scatter.o)
+    0x0800011c   0x0800011c   0x00000002   Code   RO          627    !!handler_null      c_p.l(__scatter.o)
+    0x0800011e   0x0800011e   0x00000002   PAD
+    0x08000120   0x08000120   0x0000001c   Code   RO          630    !!handler_zi        c_p.l(__scatter_zi.o)
+    0x0800013c   0x0800013c   0x00000002   Code   RO          487    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          501    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          503    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          505    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          508    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          510    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          512    .ARM.Collect$$libinit$$00000010  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          515    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          517    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          519    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          521    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          523    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          525    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          527    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          529    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          531    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          533    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          535    .ARM.Collect$$libinit$$00000027  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          539    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          541    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          543    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000000   Code   RO          545    .ARM.Collect$$libinit$$00000034  c_p.l(libinit2.o)
+    0x0800013e   0x0800013e   0x00000002   Code   RO          546    .ARM.Collect$$libinit$$00000035  c_p.l(libinit2.o)
+    0x08000140   0x08000140   0x00000002   Code   RO          581    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
+    0x08000142   0x08000142   0x00000000   Code   RO          609    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
+    0x08000142   0x08000142   0x00000000   Code   RO          611    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
+    0x08000142   0x08000142   0x00000000   Code   RO          614    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
+    0x08000142   0x08000142   0x00000000   Code   RO          617    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
+    0x08000142   0x08000142   0x00000000   Code   RO          619    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
+    0x08000142   0x08000142   0x00000000   Code   RO          622    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
+    0x08000142   0x08000142   0x00000002   Code   RO          623    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
+    0x08000144   0x08000144   0x00000000   Code   RO          451    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
+    0x08000144   0x08000144   0x00000000   Code   RO          457    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
+    0x08000144   0x08000144   0x00000006   Code   RO          469    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
+    0x0800014a   0x0800014a   0x00000000   Code   RO          459    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
+    0x0800014a   0x0800014a   0x00000004   Code   RO          460    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO          462    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
+    0x0800014e   0x0800014e   0x00000008   Code   RO          463    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
+    0x08000156   0x08000156   0x00000002   Code   RO          492    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
+    0x08000158   0x08000158   0x00000000   Code   RO          552    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
+    0x08000158   0x08000158   0x00000004   Code   RO          553    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
+    0x0800015c   0x0800015c   0x00000006   Code   RO          554    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
+    0x08000162   0x08000162   0x00000002   PAD
+    0x08000164   0x08000164   0x00000038   Code   RO          419    .text               startup_stm32g030xx.o
+    0x0800019c   0x0800019c   0x0000016c   Code   RO          443    .text               c_p.l(aeabi_sdiv.o)
+    0x08000308   0x08000308   0x00000006   Code   RO          447    .text               c_p.l(heapauxi.o)
+    0x0800030e   0x0800030e   0x0000003e   Code   RO          473    .text               c_p.l(sys_stackheap_outer.o)
+    0x0800034c   0x0800034c   0x00000010   Code   RO          476    .text               c_p.l(exit.o)
+    0x0800035c   0x0800035c   0x00000008   Code   RO          488    .text               c_p.l(libspace.o)
+    0x08000364   0x08000364   0x0000000c   Code   RO          547    .text               c_p.l(sys_exit.o)
+    0x08000370   0x08000370   0x00000002   Code   RO          570    .text               c_p.l(use_no_semi.o)
+    0x08000372   0x08000372   0x00000000   Code   RO          572    .text               c_p.l(indicate_semi.o)
+    0x08000372   0x08000372   0x00000032   Code   RO            6    .text.App_Main_Loop  app.o
+    0x080003a4   0x080003a4   0x00000058   Code   RO            4    .text.App_Setup     app.o
+    0x080003fc   0x080003fc   0x0000000c   Code   RO           49    .text.Debug_Counter_Reset  debug.o
+    0x08000408   0x08000408   0x00000094   Code   RO           31    .text.Debug_GPIO_Init  debug.o
+    0x0800049c   0x0800049c   0x00000008   Code   RO           53    .text.Debug_Get_Buf_Index  debug.o
+    0x080004a4   0x080004a4   0x0000001c   Code   RO          139    .text.Debug_Init    debug.o
+    0x080004c0   0x080004c0   0x00000078   Code   RO           33    .text.Debug_Reg_Init  debug.o
+    0x08000538   0x08000538   0x00000014   Code   RO           57    .text.Debug_Rx_Byte  debug.o
+    0x0800054c   0x0800054c   0x00000078   Code   RO           29    .text.Debug_Struct_Init  debug.o
+    0x080005c4   0x080005c4   0x00000014   Code   RO           43    .text.Debug_Timer_Disable  debug.o
+    0x080005d8   0x080005d8   0x00000018   Code   RO           41    .text.Debug_Timer_Enable  debug.o
+    0x080005f0   0x080005f0   0x0000007c   Code   RO           39    .text.Debug_Timer_Init  debug.o
+    0x0800066c   0x0800066c   0x0000003c   Code   RO           55    .text.Debug_Tx_Byte  debug.o
+    0x080006a8   0x080006a8   0x00000010   Code   RO           63    .text.Debug_Tx_NL   debug.o
+    0x080006b8   0x080006b8   0x000000ba   Code   RO           83    .text.Debug_Tx_Number_Hex  debug.o
+    0x08000772   0x08000772   0x00000014   Code   RO           93    .text.Debug_Tx_Number_Hex_NL  debug.o
+    0x08000786   0x08000786   0x0000001c   Code   RO          111    .text.Debug_Tx_Parameter_Hex_NL  debug.o
+    0x080007a2   0x080007a2   0x0000000a   Code   RO           65    .text.Debug_Tx_SP   debug.o
+    0x080007ac   0x080007ac   0x00000038   Code   RO           69    .text.Debug_Tx_Text  debug.o
+    0x080007e4   0x080007e4   0x000000de   Code   RO          174    .text.GPIO_Init     gpio.o
+    0x080008c2   0x080008c2   0x00000016   Code   RO          176    .text.GPIO_SetPin   gpio.o
+    0x080008d8   0x080008d8   0x0000001a   Code   RO          180    .text.GPIO_TogglePin  gpio.o
+    0x080008f2   0x080008f2   0x00000002   PAD
+    0x080008f4   0x080008f4   0x00000100   Code   RO            2    .text.JumpToApp     app.o
+    0x080009f4   0x080009f4   0x00000002   Code   RO          426    .text.SystemInit    system_stm32g0xx.o
+    0x080009f6   0x080009f6   0x00000002   PAD
+    0x080009f8   0x080009f8   0x00000044   Code   RO           51    .text.TIM16_IRQHandler  debug.o
+    0x08000a3c   0x08000a3c   0x00000024   Code   RO          226    .text.TIM17_IRQHandler  sw_timebase.o
+    0x08000a60   0x08000a60   0x0000005c   Code   RO           59    .text.USART2_IRQHandler  debug.o
+    0x08000abc   0x08000abc   0x00000028   Code   RO           35    .text.__NVIC_EnableIRQ  debug.o
+    0x08000ae4   0x08000ae4   0x0000002c   Code   RO          206    .text.__NVIC_EnableIRQ  sw_timebase.o
+    0x08000b10   0x08000b10   0x0000007c   Code   RO           37    .text.__NVIC_SetPriority  debug.o
+    0x08000b8c   0x08000b8c   0x00000084   Code   RO          204    .text.__NVIC_SetPriority  sw_timebase.o
+    0x08000c10   0x08000c10   0x00000014   Code   RO          191    .text.main          main.o
+    0x08000c24   0x08000c24   0x0000004c   Code   RO          228    .text.sw_timebase_ISR_executables  sw_timebase.o
+    0x08000c70   0x08000c70   0x00000014   Code   RO          208    .text.sw_timebase_Init  sw_timebase.o
+    0x08000c84   0x08000c84   0x00000004   Code   RO          224    .text.sw_timebase_atomic_operation_end  sw_timebase.o
+    0x08000c88   0x08000c88   0x00000004   Code   RO          222    .text.sw_timebase_atomic_operation_start  sw_timebase.o
+    0x08000c8c   0x08000c8c   0x00000018   Code   RO          266    .text.sw_timebase_counter_get_current_value  sw_timebase.o
+    0x08000ca4   0x08000ca4   0x00000018   Code   RO          270    .text.sw_timebase_counter_get_end_value  sw_timebase.o
+    0x08000cbc   0x08000cbc   0x00000018   Code   RO          278    .text.sw_timebase_counter_get_reload_value  sw_timebase.o
+    0x08000cd4   0x08000cd4   0x00000020   Code   RO          256    .text.sw_timebase_counter_get_status  sw_timebase.o
+    0x08000cf4   0x08000cf4   0x00000018   Code   RO          282    .text.sw_timebase_counter_get_target_value  sw_timebase.o
+    0x08000d0c   0x08000d0c   0x00000018   Code   RO          286    .text.sw_timebase_counter_get_temporary_value  sw_timebase.o
+    0x08000d24   0x08000d24   0x0000001c   Code   RO          268    .text.sw_timebase_counter_set_current_value  sw_timebase.o
+    0x08000d40   0x08000d40   0x0000001c   Code   RO          272    .text.sw_timebase_counter_set_end_value  sw_timebase.o
+    0x08000d5c   0x08000d5c   0x0000001c   Code   RO          280    .text.sw_timebase_counter_set_reload_value  sw_timebase.o
+    0x08000d78   0x08000d78   0x00000034   Code   RO          258    .text.sw_timebase_counter_set_status  sw_timebase.o
+    0x08000dac   0x08000dac   0x0000001c   Code   RO          288    .text.sw_timebase_counter_set_temporary_value  sw_timebase.o
+    0x08000dc8   0x08000dc8   0x00000014   Code   RO          368    .text.sw_timebase_counter_ss_clear_flag  sw_timebase.o
+    0x08000ddc   0x08000ddc   0x0000004e   Code   RO          386    .text.sw_timebase_counter_ss_continous_expired_event  sw_timebase.o
+    0x08000e2a   0x08000e2a   0x00000002   PAD
+    0x08000e2c   0x08000e2c   0x0000001c   Code   RO          342    .text.sw_timebase_counter_ss_get_end_value  sw_timebase.o
+    0x08000e48   0x08000e48   0x0000001c   Code   RO          346    .text.sw_timebase_counter_ss_get_end_value_sub_sec  sw_timebase.o
+    0x08000e64   0x08000e64   0x0000001c   Code   RO          354    .text.sw_timebase_counter_ss_get_reload_value  sw_timebase.o
+    0x08000e80   0x08000e80   0x00000020   Code   RO          328    .text.sw_timebase_counter_ss_get_status  sw_timebase.o
+    0x08000ea0   0x08000ea0   0x0000001c   Code   RO          358    .text.sw_timebase_counter_ss_get_target_value  sw_timebase.o
+    0x08000ebc   0x08000ebc   0x0000001c   Code   RO          362    .text.sw_timebase_counter_ss_get_temporary_value  sw_timebase.o
+    0x08000ed8   0x08000ed8   0x0000005e   Code   RO          366    .text.sw_timebase_counter_ss_reset  sw_timebase.o
+    0x08000f36   0x08000f36   0x00000002   PAD
+    0x08000f38   0x08000f38   0x00000020   Code   RO          336    .text.sw_timebase_counter_ss_reset_period_status_flag  sw_timebase.o
+    0x08000f58   0x08000f58   0x00000020   Code   RO          340    .text.sw_timebase_counter_ss_set_current_value  sw_timebase.o
+    0x08000f78   0x08000f78   0x00000020   Code   RO          344    .text.sw_timebase_counter_ss_set_end_value  sw_timebase.o
+    0x08000f98   0x08000f98   0x00000024   Code   RO          348    .text.sw_timebase_counter_ss_set_end_value_sub_sec  sw_timebase.o
+    0x08000fbc   0x08000fbc   0x00000024   Code   RO          352    .text.sw_timebase_counter_ss_set_period_value  sw_timebase.o
+    0x08000fe0   0x08000fe0   0x00000024   Code   RO          356    .text.sw_timebase_counter_ss_set_reload_value  sw_timebase.o
+    0x08001004   0x08001004   0x000000d0   Code   RO          374    .text.sw_timebase_counter_ss_set_securely  sw_timebase.o
+    0x080010d4   0x080010d4   0x00000038   Code   RO          330    .text.sw_timebase_counter_ss_set_status  sw_timebase.o
+    0x0800110c   0x0800110c   0x00000024   Code   RO          360    .text.sw_timebase_counter_ss_set_target_value  sw_timebase.o
+    0x08001130   0x08001130   0x00000024   Code   RO          364    .text.sw_timebase_counter_ss_set_temporary_value  sw_timebase.o
+    0x08001154   0x08001154   0x00000190   Code   RO          378    .text.sw_timebase_counter_ss_update  sw_timebase.o
+    0x080012e4   0x080012e4   0x0000002e   Code   RO          400    .text.sw_timebase_counter_ss_update_all  sw_timebase.o
+    0x08001312   0x08001312   0x0000013e   Code   RO          302    .text.sw_timebase_counter_update  sw_timebase.o
+    0x08001450   0x08001450   0x0000002e   Code   RO          324    .text.sw_timebase_counter_update_all  sw_timebase.o
+    0x0800147e   0x0800147e   0x00000002   PAD
+    0x08001480   0x08001480   0x0000007c   Code   RO          202    .text.sw_timebase_enable  sw_timebase.o
+    0x080014fc   0x080014fc   0x00000008   Code   RO          234    .text.sw_timebase_get_seconds  sw_timebase.o
+    0x08001504   0x08001504   0x0000000c   Code   RO          230    .text.sw_timebase_get_sub_seconds  sw_timebase.o
+    0x08001510   0x08001510   0x00000040   Code   RO          404    .text.sw_timebase_main_loop_executable  sw_timebase.o
+    0x08001550   0x08001550   0x00000140   Code   RO          200    .text.sw_timebase_struct_init  sw_timebase.o
+    0x08001690   0x08001690   0x00000044   Code   RO          406    .text.sw_timebase_variable_sync  sw_timebase.o
+    0x080016d4   0x080016d4   0x00000057   Data   RO            8    .rodata.str1.1      app.o
+    0x0800172b   0x0800172b   0x00000001   PAD
+    0x0800172c   0x0800172c   0x00000010   Data   RO          625    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800173c, Size: 0x00000d00, Max: 0x00002000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000        -       0x00000060   Zero   RW          489    .bss                c_p.l(libspace.o)
+    0x20000060        -       0x0000008d   Zero   RW          141    .bss.Debug          debug.o
+    0x200000ed   0x0800173c   0x00000003   PAD
+    0x200000f0        -       0x00000004   Zero   RW          409    .bss.sw_timebase    sw_timebase.o
+    0x200000f4   0x0800173c   0x00000004   PAD
+    0x200000f8        -       0x00000608   Zero   RW          408    .bss.sw_timebase_type  sw_timebase.o
+    0x20000700        -       0x00000200   Zero   RW          417    HEAP                startup_stm32g030xx.o
+    0x20000900        -       0x00000400   Zero   RW          416    STACK               startup_stm32g030xx.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       394         76         87          0          0       3118   app.o
+      1324         92          0          0        141      12057   debug.o
+       270          0          0          0          0       2308   gpio.o
+        20          0          0          0          0        350   main.o
+        56         26        192          0       1536        652   startup_stm32g030xx.o
+      2942         88          0          0       1548      23580   sw_timebase.o
+         2          0          0          0          0       1937   system_stm32g0xx.o
+
+    ----------------------------------------------------------------------
+      5018        282        296          0       3232      44002   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+        10          0          1          0          7          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        86         10          0          0          0          0   __scatter.o
+        28          0          0          0          0          0   __scatter_zi.o
+       364          4          0          0          0         92   aeabi_sdiv.o
+        16          0          0          0          0         68   exit.o
+         6          0          0          0          0        136   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         60   sys_exit.o
+        62          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+       634         22          0          0         96        640   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       630         22          0          0         96        640   c_p.l
+
+    ----------------------------------------------------------------------
+       634         22          0          0         96        640   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      5652        304        296          0       3328      44398   Grand Totals
+      5652        304        296          0       3328      44398   ELF Image Totals
+      5652        304        296          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 5948 (   5.81kB)
+    Total RW  Size (RW Data + ZI Data)              3328 (   3.25kB)
+    Total ROM Size (Code + RO Data + RW Data)       5948 (   5.81kB)
+
+==============================================================================
+
