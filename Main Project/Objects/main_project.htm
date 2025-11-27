@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\main_project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\main_project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Thu Nov 27 11:45:05 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Thu Nov 27 17:56:11 2025
 <BR><P>
 <H3>Maximum Stack Usage =        148 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -361,12 +361,13 @@ Global Symbols
 
 <P><STRONG><a name="[9f]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[31]"></a>App_Main_Loop</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, app.o(.text.App_Main_Loop))
+<P><STRONG><a name="[31]"></a>App_Main_Loop</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, app.o(.text.App_Main_Loop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = App_Main_Loop &rArr; sw_timebase_main_loop_executable &rArr; sw_timebase_counter_update_all &rArr; sw_timebase_counter_update &rArr; sw_timebase_counter_set_status
 </UL>
 <BR>[Calls]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_TogglePin
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_timebase_counter_ss_continous_expired_event
 <LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_timebase_main_loop_executable
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -468,6 +469,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1d]"></a>SystemInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, system_stm32g0xx.o(.text.SystemInit))
+<BR><BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Main_Loop
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32g030xx.o(.text)
 </UL>
 <P><STRONG><a name="[15]"></a>TIM16_IRQHandler</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, debug.o(.text.TIM16_IRQHandler))

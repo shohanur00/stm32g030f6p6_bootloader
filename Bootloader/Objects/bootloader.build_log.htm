@@ -8,7 +8,7 @@ Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
 License Information: de ee
 ee
 User-based license: Keil MDK Community (non-commercial free of charge)
-Valid until: Jun 1 2033. Cached until: Dec 3 2025
+Valid until: Jun 1 2033. Cached until: Dec 4 2025
  
 Tool Versions:
 Toolchain:       Keil MDK Community (non-commercial free of charge  Version: 5.39.0.0
@@ -25,42 +25,34 @@ Dialog DLL:      TARMCM1.DLL V1.14.6.0
  
 <h2>Project:</h2>
 E:\Bootloader Project\Bootloader\bootloader.uvprojx
-Project File Date:  11/26/2025
+Project File Date:  11/27/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'stm32g030f6p6'
 assembling startup_stm32g030xx.s...
 compiling main.c...
+compiling gpio.c...
+compiling flash.c...
+crc32.c(42): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+   42 |     uint32_t endAddr = startAddr + length;
+      |              ^
+crc32.c(28): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   28 |         CRC->DR = data[i];
+      |                   ^~~~
+2 warnings generated.
+compiling crc32.c...
+RTE/Device/STM32G030F6Px/system_stm32g0xx.c(286): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  286 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> RCC_CFGR_HPRE_Pos)];
+      |         ^~~~~~~~~~~~~
+1 warning generated.
+compiling system_stm32g0xx.c...
 app.c(6): warning: In file included from...
 ./debug.h(88): warning: no newline at end of file [-Wnewline-eof]
    88 | void     Debug_Init(uint32_t baud_rate);
       |                                         ^
-app.c(31): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
-   31 |                 Debug_Tx_Parameter_Hex_NL("APP_SP",app_sp);
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~          ^~~~~~
-app.c(32): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
-   32 |                 Debug_Tx_Parameter_Hex_NL("APP_RST",app_reset);
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~           ^~~~~~~~~
-app.c(44): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
-   44 |                 Debug_Tx_Parameter_Hex_NL("VT0", *(uint32_t*)(APP_ADDR + 0));
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~        ^~~~~~~~~~~~~~~~~~~~~~~~~~
-app.c(45): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
-   45 |                 Debug_Tx_Parameter_Hex_NL("VT1", *(uint32_t*)(APP_ADDR + 4));
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~        ^~~~~~~~~~~~~~~~~~~~~~~~~~
-app.c(46): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
-   46 |                 Debug_Tx_Parameter_Hex_NL("VT2", *(uint32_t*)(APP_ADDR + 8));
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~        ^~~~~~~~~~~~~~~~~~~~~~~~~~
-app.c(47): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int32_t' (aka 'int') [-Wsign-conversion]
-   47 |                 Debug_Tx_Parameter_Hex_NL("VT3", *(uint32_t*)(APP_ADDR + 12));
-      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~        ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.c(61): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-   61 |     uint32_t jump_addr = (app_reset & ~1U);
-      |              ^
-8 warnings generated.
+1 warning generated.
 compiling app.c...
-compiling gpio.c...
-compiling flash.c...
 debug.c(6): warning: In file included from...
 ./debug.h(88): warning: no newline at end of file [-Wnewline-eof]
    88 | void     Debug_Init(uint32_t baud_rate);
@@ -354,23 +346,10 @@ sw_timebase.c(723): warning: unsafe buffer access [-Wunsafe-buffer-usage]
       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
 66 warnings generated.
 compiling sw_timebase.c...
-RTE/Device/STM32G030F6Px/system_stm32g0xx.c(286): warning: unsafe buffer access [-Wunsafe-buffer-usage]
-  286 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> RCC_CFGR_HPRE_Pos)];
-      |         ^~~~~~~~~~~~~
-1 warning generated.
-compiling system_stm32g0xx.c...
-crc32.c(42): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-   42 |     uint32_t endAddr = startAddr + length;
-      |              ^
-crc32.c(28): warning: unsafe buffer access [-Wunsafe-buffer-usage]
-   28 |         CRC->DR = data[i];
-      |                   ^~~~
-2 warnings generated.
-compiling crc32.c...
 linking...
-Program Size: Code=5652 RO-data=296 RW-data=0 ZI-data=3328  
+Program Size: Code=5048 RO-data=208 RW-data=0 ZI-data=3328  
 FromELF: creating hex file...
-".\Objects\bootloader.axf" - 0 Error(s), 100 Warning(s).
+".\Objects\bootloader.axf" - 0 Error(s), 93 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -397,11 +376,11 @@ Package Vendor: Keil
 
    * Component: Keil::Device:Startup@1.4.2
       Source file:   MDK/Device/Source/ARM/STM32G0x0_SB_OPT.s
-      Source file:   MDK/Device/Source/ARM/STM32G0x0_DB_OPT.s
-      Source file:   Drivers/CMSIS/Device/ST/STM32G0xx/Source/Templates/arm/startup_stm32g030xx.s
       Include file:  Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32G0xx/Source/Templates/arm/startup_stm32g030xx.s
+      Source file:   MDK/Device/Source/ARM/STM32G0x0_DB_OPT.s
       Source file:   Drivers/CMSIS/Device/ST/STM32G0xx/Source/Templates/system_stm32g0xx.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

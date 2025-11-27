@@ -41,7 +41,7 @@ void App_Setup(void){
 
 void App_Main_Loop(void){
 	
-	
+	SystemInit();
 	sw_timebase_main_loop_executable();
 	/*if(sw_timebase_counter_ss_period_value_expired_event(0)){
 		GPIO_TogglePin(GPIOA, 4);

@@ -22,48 +22,17 @@
 
 void JumpToApp(void);
 
-typedef void (*app_fn)(void);
+
 
 void JumpToApp(void)
 {
-    uint32_t app_sp    = *(volatile uint32_t*)(APP_ADDR);
-    uint32_t app_reset = *(volatile uint32_t*)(APP_ADDR + 4);
-		Debug_Tx_Parameter_Hex_NL("APP_SP",app_sp);
-		Debug_Tx_Parameter_Hex_NL("APP_RST",app_reset);
-
-    // Validate Stack Pointer
-    if ((app_sp & 0x2FFE0000) != 0x20000000)
-        return;
-
-		Debug_Tx_Parameter_Hex_NL("Validate Stack Pointer",1);
-		
-    // Validate Reset Handler
-    if ((app_reset & 0xFF000000) != 0x08000000)
-        return;
-		Debug_Tx_Parameter_Hex_NL("Validate Reset Handler",1);
-		Debug_Tx_Parameter_Hex_NL("VT0", *(uint32_t*)(APP_ADDR + 0));
-		Debug_Tx_Parameter_Hex_NL("VT1", *(uint32_t*)(APP_ADDR + 4));
-		Debug_Tx_Parameter_Hex_NL("VT2", *(uint32_t*)(APP_ADDR + 8));
-		Debug_Tx_Parameter_Hex_NL("VT3", *(uint32_t*)(APP_ADDR + 12));
-
-
-    //__disable_irq();
-
-    SysTick->CTRL = 0;
-    SysTick->LOAD = 0;
-    SysTick->VAL  = 0;
-
-    // IMPORTANT for STM32G030
-    SCB->VTOR = APP_ADDR;
-
-    __set_MSP(app_sp);
-
-    uint32_t jump_addr = (app_reset & ~1U);
-    app_fn app = (app_fn)jump_addr;
-    app();
-		Debug_Tx_Parameter_Hex_NL("Jump Back",1);
+	typedef void (*app_fn)(void);
+	uint32_t* reset_vector_entry = (uint32_t*)(APP_ADDR+4U);
+	uint32_t* reset_vector = (uint32_t *)(*reset_vector_entry);
+	app_fn jump_fn = (app_fn)reset_vector;
+	jump_fn();
+	
 }
-
 
 void App_Setup(void){
 	

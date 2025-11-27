@@ -10,6 +10,7 @@ Section Cross References
     app.o(.text.App_Setup) refers to sw_timebase.o(.text.sw_timebase_Init) for sw_timebase_Init
     app.o(.text.App_Setup) refers to sw_timebase.o(.text.sw_timebase_counter_ss_set_securely) for sw_timebase_counter_ss_set_securely
     app.o(.ARM.exidx.text.App_Setup) refers to app.o(.text.App_Setup) for [Anonymous Symbol]
+    app.o(.text.App_Main_Loop) refers to system_stm32g0xx.o(.text.SystemInit) for SystemInit
     app.o(.text.App_Main_Loop) refers to sw_timebase.o(.text.sw_timebase_main_loop_executable) for sw_timebase_main_loop_executable
     app.o(.text.App_Main_Loop) refers to sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event) for sw_timebase_counter_ss_continous_expired_event
     app.o(.text.App_Main_Loop) refers to gpio.o(.text.GPIO_TogglePin) for GPIO_TogglePin
@@ -1093,118 +1094,118 @@ Image Symbol Table
     .text                                    0x08002370   Section        2  use_no_semi.o(.text)
     [Anonymous Symbol]                       0x08002372   Section        0  app.o(.text.App_Main_Loop)
     .text                                    0x08002372   Section        0  indicate_semi.o(.text)
-    [Anonymous Symbol]                       0x08002394   Section        0  app.o(.text.App_Setup)
-    [Anonymous Symbol]                       0x080023e0   Section        0  debug.o(.text.Debug_Counter_Reset)
-    __arm_cp.10_0                            0x080023e8   Number         4  debug.o(.text.Debug_Counter_Reset)
-    [Anonymous Symbol]                       0x080023ec   Section        0  debug.o(.text.Debug_GPIO_Init)
-    __arm_cp.1_0                             0x08002474   Number         4  debug.o(.text.Debug_GPIO_Init)
-    __arm_cp.1_1                             0x08002478   Number         4  debug.o(.text.Debug_GPIO_Init)
-    __arm_cp.1_2                             0x0800247c   Number         4  debug.o(.text.Debug_GPIO_Init)
-    [Anonymous Symbol]                       0x08002480   Section        0  debug.o(.text.Debug_Get_Buf_Index)
-    [Anonymous Symbol]                       0x08002488   Section        0  debug.o(.text.Debug_Init)
-    [Anonymous Symbol]                       0x080024a4   Section        0  debug.o(.text.Debug_Reg_Init)
-    __arm_cp.2_0                             0x0800250c   Number         4  debug.o(.text.Debug_Reg_Init)
-    __arm_cp.2_1                             0x08002510   Number         4  debug.o(.text.Debug_Reg_Init)
-    __arm_cp.2_2                             0x08002514   Number         4  debug.o(.text.Debug_Reg_Init)
-    __arm_cp.2_3                             0x08002518   Number         4  debug.o(.text.Debug_Reg_Init)
-    [Anonymous Symbol]                       0x0800251c   Section        0  debug.o(.text.Debug_Rx_Byte)
-    __arm_cp.14_0                            0x0800252c   Number         4  debug.o(.text.Debug_Rx_Byte)
-    [Anonymous Symbol]                       0x08002530   Section        0  debug.o(.text.Debug_Struct_Init)
-    [Anonymous Symbol]                       0x080025a8   Section        0  debug.o(.text.Debug_Timer_Disable)
-    [Anonymous Symbol]                       0x080025bc   Section        0  debug.o(.text.Debug_Timer_Enable)
-    [Anonymous Symbol]                       0x080025d0   Section        0  debug.o(.text.Debug_Timer_Init)
-    __arm_cp.5_0                             0x08002630   Number         4  debug.o(.text.Debug_Timer_Init)
-    __arm_cp.5_1                             0x08002634   Number         4  debug.o(.text.Debug_Timer_Init)
-    __arm_cp.5_2                             0x08002638   Number         4  debug.o(.text.Debug_Timer_Init)
-    __arm_cp.5_3                             0x0800263c   Number         4  debug.o(.text.Debug_Timer_Init)
-    __arm_cp.5_4                             0x08002640   Number         4  debug.o(.text.Debug_Timer_Init)
-    __arm_cp.5_5                             0x08002644   Number         4  debug.o(.text.Debug_Timer_Init)
-    __arm_cp.5_6                             0x08002648   Number         4  debug.o(.text.Debug_Timer_Init)
-    [Anonymous Symbol]                       0x0800264c   Section        0  gpio.o(.text.GPIO_Init)
-    [Anonymous Symbol]                       0x0800272a   Section        0  gpio.o(.text.GPIO_SetPin)
-    [Anonymous Symbol]                       0x08002740   Section        0  gpio.o(.text.GPIO_TogglePin)
-    [Anonymous Symbol]                       0x0800275a   Section        0  system_stm32g0xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x0800275c   Section        0  debug.o(.text.TIM16_IRQHandler)
-    __arm_cp.11_1                            0x0800279c   Number         4  debug.o(.text.TIM16_IRQHandler)
-    [Anonymous Symbol]                       0x080027a0   Section        0  sw_timebase.o(.text.TIM17_IRQHandler)
-    __arm_cp.13_0                            0x080027c0   Number         4  sw_timebase.o(.text.TIM17_IRQHandler)
-    [Anonymous Symbol]                       0x080027c4   Section        0  debug.o(.text.USART2_IRQHandler)
-    __arm_cp.15_0                            0x08002818   Number         4  debug.o(.text.USART2_IRQHandler)
-    __arm_cp.15_1                            0x0800281c   Number         4  debug.o(.text.USART2_IRQHandler)
-    __NVIC_EnableIRQ                         0x08002821   Thumb Code    40  debug.o(.text.__NVIC_EnableIRQ)
-    [Anonymous Symbol]                       0x08002820   Section        0  debug.o(.text.__NVIC_EnableIRQ)
-    __NVIC_EnableIRQ                         0x08002849   Thumb Code    40  sw_timebase.o(.text.__NVIC_EnableIRQ)
-    [Anonymous Symbol]                       0x08002848   Section        0  sw_timebase.o(.text.__NVIC_EnableIRQ)
-    __arm_cp.3_0                             0x08002870   Number         4  sw_timebase.o(.text.__NVIC_EnableIRQ)
-    __NVIC_SetPriority                       0x08002875   Thumb Code   124  debug.o(.text.__NVIC_SetPriority)
-    [Anonymous Symbol]                       0x08002874   Section        0  debug.o(.text.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x080028f1   Thumb Code   124  sw_timebase.o(.text.__NVIC_SetPriority)
-    [Anonymous Symbol]                       0x080028f0   Section        0  sw_timebase.o(.text.__NVIC_SetPriority)
-    __arm_cp.2_0                             0x0800296c   Number         4  sw_timebase.o(.text.__NVIC_SetPriority)
-    __arm_cp.2_1                             0x08002970   Number         4  sw_timebase.o(.text.__NVIC_SetPriority)
-    [Anonymous Symbol]                       0x08002974   Section        0  main.o(.text.main)
-    [Anonymous Symbol]                       0x08002988   Section        0  sw_timebase.o(.text.sw_timebase_ISR_executables)
-    [Anonymous Symbol]                       0x080029d4   Section        0  sw_timebase.o(.text.sw_timebase_Init)
-    [Anonymous Symbol]                       0x080029e8   Section        0  sw_timebase.o(.text.sw_timebase_atomic_operation_end)
-    [Anonymous Symbol]                       0x080029ec   Section        0  sw_timebase.o(.text.sw_timebase_atomic_operation_start)
-    [Anonymous Symbol]                       0x080029f0   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_current_value)
-    [Anonymous Symbol]                       0x08002a08   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_end_value)
-    [Anonymous Symbol]                       0x08002a20   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_reload_value)
-    [Anonymous Symbol]                       0x08002a38   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_status)
-    [Anonymous Symbol]                       0x08002a58   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_target_value)
-    [Anonymous Symbol]                       0x08002a70   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_temporary_value)
-    [Anonymous Symbol]                       0x08002a88   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_current_value)
-    [Anonymous Symbol]                       0x08002aa4   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_end_value)
-    [Anonymous Symbol]                       0x08002ac0   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_reload_value)
-    [Anonymous Symbol]                       0x08002adc   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_status)
-    [Anonymous Symbol]                       0x08002b10   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_temporary_value)
-    [Anonymous Symbol]                       0x08002b2c   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_clear_flag)
-    [Anonymous Symbol]                       0x08002b40   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event)
-    [Anonymous Symbol]                       0x08002b90   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value)
-    [Anonymous Symbol]                       0x08002bac   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value_sub_sec)
-    [Anonymous Symbol]                       0x08002bc8   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_reload_value)
-    [Anonymous Symbol]                       0x08002be4   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_status)
-    [Anonymous Symbol]                       0x08002c04   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value)
-    [Anonymous Symbol]                       0x08002c20   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_temporary_value)
-    [Anonymous Symbol]                       0x08002c3c   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_reset)
-    [Anonymous Symbol]                       0x08002c9c   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_reset_period_status_flag)
-    [Anonymous Symbol]                       0x08002cbc   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value)
-    [Anonymous Symbol]                       0x08002cdc   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value)
-    [Anonymous Symbol]                       0x08002cfc   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec)
-    __arm_cp.74_0                            0x08002d1c   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec)
-    [Anonymous Symbol]                       0x08002d20   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value)
-    __arm_cp.76_0                            0x08002d40   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value)
-    [Anonymous Symbol]                       0x08002d44   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value)
-    __arm_cp.78_0                            0x08002d64   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value)
-    [Anonymous Symbol]                       0x08002d68   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_securely)
-    __arm_cp.87_0                            0x08002e34   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_securely)
-    [Anonymous Symbol]                       0x08002e38   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_status)
-    __arm_cp.65_0                            0x08002e6c   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_status)
-    [Anonymous Symbol]                       0x08002e70   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value)
-    __arm_cp.80_0                            0x08002e90   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value)
-    [Anonymous Symbol]                       0x08002e94   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value)
-    __arm_cp.82_0                            0x08002eb4   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value)
-    [Anonymous Symbol]                       0x08002eb8   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_update)
-    __arm_cp.89_0                            0x08003044   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_update)
-    [Anonymous Symbol]                       0x08003048   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_update_all)
-    [Anonymous Symbol]                       0x08003076   Section        0  sw_timebase.o(.text.sw_timebase_counter_update)
-    [Anonymous Symbol]                       0x080031b4   Section        0  sw_timebase.o(.text.sw_timebase_counter_update_all)
-    [Anonymous Symbol]                       0x080031e4   Section        0  sw_timebase.o(.text.sw_timebase_enable)
-    __arm_cp.1_0                             0x08003248   Number         4  sw_timebase.o(.text.sw_timebase_enable)
-    __arm_cp.1_1                             0x0800324c   Number         4  sw_timebase.o(.text.sw_timebase_enable)
-    __arm_cp.1_2                             0x08003250   Number         4  sw_timebase.o(.text.sw_timebase_enable)
-    __arm_cp.1_3                             0x08003254   Number         4  sw_timebase.o(.text.sw_timebase_enable)
-    __arm_cp.1_4                             0x08003258   Number         4  sw_timebase.o(.text.sw_timebase_enable)
-    __arm_cp.1_5                             0x0800325c   Number         4  sw_timebase.o(.text.sw_timebase_enable)
-    [Anonymous Symbol]                       0x08003260   Section        0  sw_timebase.o(.text.sw_timebase_get_seconds)
-    [Anonymous Symbol]                       0x08003268   Section        0  sw_timebase.o(.text.sw_timebase_get_sub_seconds)
-    __arm_cp.15_0                            0x08003270   Number         4  sw_timebase.o(.text.sw_timebase_get_sub_seconds)
-    [Anonymous Symbol]                       0x08003274   Section        0  sw_timebase.o(.text.sw_timebase_main_loop_executable)
-    __arm_cp.102_0                           0x080032b0   Number         4  sw_timebase.o(.text.sw_timebase_main_loop_executable)
-    [Anonymous Symbol]                       0x080032b4   Section        0  sw_timebase.o(.text.sw_timebase_struct_init)
-    __arm_cp.0_1                             0x080033f0   Number         4  sw_timebase.o(.text.sw_timebase_struct_init)
-    [Anonymous Symbol]                       0x080033f4   Section        0  sw_timebase.o(.text.sw_timebase_variable_sync)
-    __arm_cp.103_0                           0x08003434   Number         4  sw_timebase.o(.text.sw_timebase_variable_sync)
+    [Anonymous Symbol]                       0x08002398   Section        0  app.o(.text.App_Setup)
+    [Anonymous Symbol]                       0x080023e4   Section        0  debug.o(.text.Debug_Counter_Reset)
+    __arm_cp.10_0                            0x080023ec   Number         4  debug.o(.text.Debug_Counter_Reset)
+    [Anonymous Symbol]                       0x080023f0   Section        0  debug.o(.text.Debug_GPIO_Init)
+    __arm_cp.1_0                             0x08002478   Number         4  debug.o(.text.Debug_GPIO_Init)
+    __arm_cp.1_1                             0x0800247c   Number         4  debug.o(.text.Debug_GPIO_Init)
+    __arm_cp.1_2                             0x08002480   Number         4  debug.o(.text.Debug_GPIO_Init)
+    [Anonymous Symbol]                       0x08002484   Section        0  debug.o(.text.Debug_Get_Buf_Index)
+    [Anonymous Symbol]                       0x0800248c   Section        0  debug.o(.text.Debug_Init)
+    [Anonymous Symbol]                       0x080024a8   Section        0  debug.o(.text.Debug_Reg_Init)
+    __arm_cp.2_0                             0x08002510   Number         4  debug.o(.text.Debug_Reg_Init)
+    __arm_cp.2_1                             0x08002514   Number         4  debug.o(.text.Debug_Reg_Init)
+    __arm_cp.2_2                             0x08002518   Number         4  debug.o(.text.Debug_Reg_Init)
+    __arm_cp.2_3                             0x0800251c   Number         4  debug.o(.text.Debug_Reg_Init)
+    [Anonymous Symbol]                       0x08002520   Section        0  debug.o(.text.Debug_Rx_Byte)
+    __arm_cp.14_0                            0x08002530   Number         4  debug.o(.text.Debug_Rx_Byte)
+    [Anonymous Symbol]                       0x08002534   Section        0  debug.o(.text.Debug_Struct_Init)
+    [Anonymous Symbol]                       0x080025ac   Section        0  debug.o(.text.Debug_Timer_Disable)
+    [Anonymous Symbol]                       0x080025c0   Section        0  debug.o(.text.Debug_Timer_Enable)
+    [Anonymous Symbol]                       0x080025d4   Section        0  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_0                             0x08002634   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_1                             0x08002638   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_2                             0x0800263c   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_3                             0x08002640   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_4                             0x08002644   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_5                             0x08002648   Number         4  debug.o(.text.Debug_Timer_Init)
+    __arm_cp.5_6                             0x0800264c   Number         4  debug.o(.text.Debug_Timer_Init)
+    [Anonymous Symbol]                       0x08002650   Section        0  gpio.o(.text.GPIO_Init)
+    [Anonymous Symbol]                       0x0800272e   Section        0  gpio.o(.text.GPIO_SetPin)
+    [Anonymous Symbol]                       0x08002744   Section        0  gpio.o(.text.GPIO_TogglePin)
+    [Anonymous Symbol]                       0x0800275e   Section        0  system_stm32g0xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08002760   Section        0  debug.o(.text.TIM16_IRQHandler)
+    __arm_cp.11_1                            0x080027a0   Number         4  debug.o(.text.TIM16_IRQHandler)
+    [Anonymous Symbol]                       0x080027a4   Section        0  sw_timebase.o(.text.TIM17_IRQHandler)
+    __arm_cp.13_0                            0x080027c4   Number         4  sw_timebase.o(.text.TIM17_IRQHandler)
+    [Anonymous Symbol]                       0x080027c8   Section        0  debug.o(.text.USART2_IRQHandler)
+    __arm_cp.15_0                            0x0800281c   Number         4  debug.o(.text.USART2_IRQHandler)
+    __arm_cp.15_1                            0x08002820   Number         4  debug.o(.text.USART2_IRQHandler)
+    __NVIC_EnableIRQ                         0x08002825   Thumb Code    40  debug.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x08002824   Section        0  debug.o(.text.__NVIC_EnableIRQ)
+    __NVIC_EnableIRQ                         0x0800284d   Thumb Code    40  sw_timebase.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x0800284c   Section        0  sw_timebase.o(.text.__NVIC_EnableIRQ)
+    __arm_cp.3_0                             0x08002874   Number         4  sw_timebase.o(.text.__NVIC_EnableIRQ)
+    __NVIC_SetPriority                       0x08002879   Thumb Code   124  debug.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08002878   Section        0  debug.o(.text.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x080028f5   Thumb Code   124  sw_timebase.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x080028f4   Section        0  sw_timebase.o(.text.__NVIC_SetPriority)
+    __arm_cp.2_0                             0x08002970   Number         4  sw_timebase.o(.text.__NVIC_SetPriority)
+    __arm_cp.2_1                             0x08002974   Number         4  sw_timebase.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x08002978   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x0800298c   Section        0  sw_timebase.o(.text.sw_timebase_ISR_executables)
+    [Anonymous Symbol]                       0x080029d8   Section        0  sw_timebase.o(.text.sw_timebase_Init)
+    [Anonymous Symbol]                       0x080029ec   Section        0  sw_timebase.o(.text.sw_timebase_atomic_operation_end)
+    [Anonymous Symbol]                       0x080029f0   Section        0  sw_timebase.o(.text.sw_timebase_atomic_operation_start)
+    [Anonymous Symbol]                       0x080029f4   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_current_value)
+    [Anonymous Symbol]                       0x08002a0c   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_end_value)
+    [Anonymous Symbol]                       0x08002a24   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_reload_value)
+    [Anonymous Symbol]                       0x08002a3c   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_status)
+    [Anonymous Symbol]                       0x08002a5c   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_target_value)
+    [Anonymous Symbol]                       0x08002a74   Section        0  sw_timebase.o(.text.sw_timebase_counter_get_temporary_value)
+    [Anonymous Symbol]                       0x08002a8c   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_current_value)
+    [Anonymous Symbol]                       0x08002aa8   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_end_value)
+    [Anonymous Symbol]                       0x08002ac4   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_reload_value)
+    [Anonymous Symbol]                       0x08002ae0   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_status)
+    [Anonymous Symbol]                       0x08002b14   Section        0  sw_timebase.o(.text.sw_timebase_counter_set_temporary_value)
+    [Anonymous Symbol]                       0x08002b30   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_clear_flag)
+    [Anonymous Symbol]                       0x08002b44   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event)
+    [Anonymous Symbol]                       0x08002b94   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value)
+    [Anonymous Symbol]                       0x08002bb0   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value_sub_sec)
+    [Anonymous Symbol]                       0x08002bcc   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_reload_value)
+    [Anonymous Symbol]                       0x08002be8   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_status)
+    [Anonymous Symbol]                       0x08002c08   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value)
+    [Anonymous Symbol]                       0x08002c24   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_get_temporary_value)
+    [Anonymous Symbol]                       0x08002c40   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_reset)
+    [Anonymous Symbol]                       0x08002ca0   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_reset_period_status_flag)
+    [Anonymous Symbol]                       0x08002cc0   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value)
+    [Anonymous Symbol]                       0x08002ce0   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value)
+    [Anonymous Symbol]                       0x08002d00   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec)
+    __arm_cp.74_0                            0x08002d20   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec)
+    [Anonymous Symbol]                       0x08002d24   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value)
+    __arm_cp.76_0                            0x08002d44   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value)
+    [Anonymous Symbol]                       0x08002d48   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value)
+    __arm_cp.78_0                            0x08002d68   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value)
+    [Anonymous Symbol]                       0x08002d6c   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_securely)
+    __arm_cp.87_0                            0x08002e38   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_securely)
+    [Anonymous Symbol]                       0x08002e3c   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_status)
+    __arm_cp.65_0                            0x08002e70   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_status)
+    [Anonymous Symbol]                       0x08002e74   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value)
+    __arm_cp.80_0                            0x08002e94   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value)
+    [Anonymous Symbol]                       0x08002e98   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value)
+    __arm_cp.82_0                            0x08002eb8   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value)
+    [Anonymous Symbol]                       0x08002ebc   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_update)
+    __arm_cp.89_0                            0x08003048   Number         4  sw_timebase.o(.text.sw_timebase_counter_ss_update)
+    [Anonymous Symbol]                       0x0800304c   Section        0  sw_timebase.o(.text.sw_timebase_counter_ss_update_all)
+    [Anonymous Symbol]                       0x0800307a   Section        0  sw_timebase.o(.text.sw_timebase_counter_update)
+    [Anonymous Symbol]                       0x080031b8   Section        0  sw_timebase.o(.text.sw_timebase_counter_update_all)
+    [Anonymous Symbol]                       0x080031e8   Section        0  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_0                             0x0800324c   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_1                             0x08003250   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_2                             0x08003254   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_3                             0x08003258   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_4                             0x0800325c   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    __arm_cp.1_5                             0x08003260   Number         4  sw_timebase.o(.text.sw_timebase_enable)
+    [Anonymous Symbol]                       0x08003264   Section        0  sw_timebase.o(.text.sw_timebase_get_seconds)
+    [Anonymous Symbol]                       0x0800326c   Section        0  sw_timebase.o(.text.sw_timebase_get_sub_seconds)
+    __arm_cp.15_0                            0x08003274   Number         4  sw_timebase.o(.text.sw_timebase_get_sub_seconds)
+    [Anonymous Symbol]                       0x08003278   Section        0  sw_timebase.o(.text.sw_timebase_main_loop_executable)
+    __arm_cp.102_0                           0x080032b4   Number         4  sw_timebase.o(.text.sw_timebase_main_loop_executable)
+    [Anonymous Symbol]                       0x080032b8   Section        0  sw_timebase.o(.text.sw_timebase_struct_init)
+    __arm_cp.0_1                             0x080033f4   Number         4  sw_timebase.o(.text.sw_timebase_struct_init)
+    [Anonymous Symbol]                       0x080033f8   Section        0  sw_timebase.o(.text.sw_timebase_variable_sync)
+    __arm_cp.103_0                           0x08003438   Number         4  sw_timebase.o(.text.sw_timebase_variable_sync)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000700   Data         512  startup_stm32g030xx.o(HEAP)
     HEAP                                     0x20000700   Section      512  startup_stm32g030xx.o(HEAP)
@@ -1340,73 +1341,73 @@ Image Symbol Table
     _sys_exit                                0x08002365   Thumb Code     8  sys_exit.o(.text)
     __I$use$semihosting                      0x08002371   Thumb Code     0  use_no_semi.o(.text)
     __use_no_semihosting_swi                 0x08002371   Thumb Code     2  use_no_semi.o(.text)
-    App_Main_Loop                            0x08002373   Thumb Code    32  app.o(.text.App_Main_Loop)
+    App_Main_Loop                            0x08002373   Thumb Code    36  app.o(.text.App_Main_Loop)
     __semihosting_library_function           0x08002373   Thumb Code     0  indicate_semi.o(.text)
-    App_Setup                                0x08002395   Thumb Code    76  app.o(.text.App_Setup)
-    Debug_Counter_Reset                      0x080023e1   Thumb Code     8  debug.o(.text.Debug_Counter_Reset)
-    Debug_GPIO_Init                          0x080023ed   Thumb Code   136  debug.o(.text.Debug_GPIO_Init)
-    Debug_Get_Buf_Index                      0x08002481   Thumb Code     8  debug.o(.text.Debug_Get_Buf_Index)
-    Debug_Init                               0x08002489   Thumb Code    28  debug.o(.text.Debug_Init)
-    Debug_Reg_Init                           0x080024a5   Thumb Code   104  debug.o(.text.Debug_Reg_Init)
-    Debug_Rx_Byte                            0x0800251d   Thumb Code    16  debug.o(.text.Debug_Rx_Byte)
-    Debug_Struct_Init                        0x08002531   Thumb Code   120  debug.o(.text.Debug_Struct_Init)
-    Debug_Timer_Disable                      0x080025a9   Thumb Code    20  debug.o(.text.Debug_Timer_Disable)
-    Debug_Timer_Enable                       0x080025bd   Thumb Code    20  debug.o(.text.Debug_Timer_Enable)
-    Debug_Timer_Init                         0x080025d1   Thumb Code    96  debug.o(.text.Debug_Timer_Init)
-    GPIO_Init                                0x0800264d   Thumb Code   222  gpio.o(.text.GPIO_Init)
-    GPIO_SetPin                              0x0800272b   Thumb Code    22  gpio.o(.text.GPIO_SetPin)
-    GPIO_TogglePin                           0x08002741   Thumb Code    26  gpio.o(.text.GPIO_TogglePin)
-    SystemInit                               0x0800275b   Thumb Code     2  system_stm32g0xx.o(.text.SystemInit)
-    TIM16_IRQHandler                         0x0800275d   Thumb Code    64  debug.o(.text.TIM16_IRQHandler)
-    TIM17_IRQHandler                         0x080027a1   Thumb Code    32  sw_timebase.o(.text.TIM17_IRQHandler)
-    USART2_IRQHandler                        0x080027c5   Thumb Code    84  debug.o(.text.USART2_IRQHandler)
-    main                                     0x08002975   Thumb Code    20  main.o(.text.main)
-    sw_timebase_ISR_executables              0x08002989   Thumb Code    76  sw_timebase.o(.text.sw_timebase_ISR_executables)
-    sw_timebase_Init                         0x080029d5   Thumb Code    20  sw_timebase.o(.text.sw_timebase_Init)
-    sw_timebase_atomic_operation_end         0x080029e9   Thumb Code     4  sw_timebase.o(.text.sw_timebase_atomic_operation_end)
-    sw_timebase_atomic_operation_start       0x080029ed   Thumb Code     4  sw_timebase.o(.text.sw_timebase_atomic_operation_start)
-    sw_timebase_counter_get_current_value    0x080029f1   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_current_value)
-    sw_timebase_counter_get_end_value        0x08002a09   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_end_value)
-    sw_timebase_counter_get_reload_value     0x08002a21   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_reload_value)
-    sw_timebase_counter_get_status           0x08002a39   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_get_status)
-    sw_timebase_counter_get_target_value     0x08002a59   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_target_value)
-    sw_timebase_counter_get_temporary_value  0x08002a71   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_temporary_value)
-    sw_timebase_counter_set_current_value    0x08002a89   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_current_value)
-    sw_timebase_counter_set_end_value        0x08002aa5   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_end_value)
-    sw_timebase_counter_set_reload_value     0x08002ac1   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_reload_value)
-    sw_timebase_counter_set_status           0x08002add   Thumb Code    52  sw_timebase.o(.text.sw_timebase_counter_set_status)
-    sw_timebase_counter_set_temporary_value  0x08002b11   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_temporary_value)
-    sw_timebase_counter_ss_clear_flag        0x08002b2d   Thumb Code    20  sw_timebase.o(.text.sw_timebase_counter_ss_clear_flag)
-    sw_timebase_counter_ss_continous_expired_event 0x08002b41   Thumb Code    78  sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event)
-    sw_timebase_counter_ss_get_end_value     0x08002b91   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value)
-    sw_timebase_counter_ss_get_end_value_sub_sec 0x08002bad   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value_sub_sec)
-    sw_timebase_counter_ss_get_reload_value  0x08002bc9   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_reload_value)
-    sw_timebase_counter_ss_get_status        0x08002be5   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_get_status)
-    sw_timebase_counter_ss_get_target_value  0x08002c05   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value)
-    sw_timebase_counter_ss_get_temporary_value 0x08002c21   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_temporary_value)
-    sw_timebase_counter_ss_reset             0x08002c3d   Thumb Code    94  sw_timebase.o(.text.sw_timebase_counter_ss_reset)
-    sw_timebase_counter_ss_reset_period_status_flag 0x08002c9d   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_reset_period_status_flag)
-    sw_timebase_counter_ss_set_current_value 0x08002cbd   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value)
-    sw_timebase_counter_ss_set_end_value     0x08002cdd   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value)
-    sw_timebase_counter_ss_set_end_value_sub_sec 0x08002cfd   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec)
-    sw_timebase_counter_ss_set_period_value  0x08002d21   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value)
-    sw_timebase_counter_ss_set_reload_value  0x08002d45   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value)
-    sw_timebase_counter_ss_set_securely      0x08002d69   Thumb Code   204  sw_timebase.o(.text.sw_timebase_counter_ss_set_securely)
-    sw_timebase_counter_ss_set_status        0x08002e39   Thumb Code    52  sw_timebase.o(.text.sw_timebase_counter_ss_set_status)
-    sw_timebase_counter_ss_set_target_value  0x08002e71   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value)
-    sw_timebase_counter_ss_set_temporary_value 0x08002e95   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value)
-    sw_timebase_counter_ss_update            0x08002eb9   Thumb Code   396  sw_timebase.o(.text.sw_timebase_counter_ss_update)
-    sw_timebase_counter_ss_update_all        0x08003049   Thumb Code    46  sw_timebase.o(.text.sw_timebase_counter_ss_update_all)
-    sw_timebase_counter_update               0x08003077   Thumb Code   318  sw_timebase.o(.text.sw_timebase_counter_update)
-    sw_timebase_counter_update_all           0x080031b5   Thumb Code    46  sw_timebase.o(.text.sw_timebase_counter_update_all)
-    sw_timebase_enable                       0x080031e5   Thumb Code   100  sw_timebase.o(.text.sw_timebase_enable)
-    sw_timebase_get_seconds                  0x08003261   Thumb Code     8  sw_timebase.o(.text.sw_timebase_get_seconds)
-    sw_timebase_get_sub_seconds              0x08003269   Thumb Code     8  sw_timebase.o(.text.sw_timebase_get_sub_seconds)
-    sw_timebase_main_loop_executable         0x08003275   Thumb Code    60  sw_timebase.o(.text.sw_timebase_main_loop_executable)
-    sw_timebase_struct_init                  0x080032b5   Thumb Code   316  sw_timebase.o(.text.sw_timebase_struct_init)
-    sw_timebase_variable_sync                0x080033f5   Thumb Code    64  sw_timebase.o(.text.sw_timebase_variable_sync)
-    Region$$Table$$Base                      0x08003438   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08003448   Number         0  anon$$obj.o(Region$$Table)
+    App_Setup                                0x08002399   Thumb Code    76  app.o(.text.App_Setup)
+    Debug_Counter_Reset                      0x080023e5   Thumb Code     8  debug.o(.text.Debug_Counter_Reset)
+    Debug_GPIO_Init                          0x080023f1   Thumb Code   136  debug.o(.text.Debug_GPIO_Init)
+    Debug_Get_Buf_Index                      0x08002485   Thumb Code     8  debug.o(.text.Debug_Get_Buf_Index)
+    Debug_Init                               0x0800248d   Thumb Code    28  debug.o(.text.Debug_Init)
+    Debug_Reg_Init                           0x080024a9   Thumb Code   104  debug.o(.text.Debug_Reg_Init)
+    Debug_Rx_Byte                            0x08002521   Thumb Code    16  debug.o(.text.Debug_Rx_Byte)
+    Debug_Struct_Init                        0x08002535   Thumb Code   120  debug.o(.text.Debug_Struct_Init)
+    Debug_Timer_Disable                      0x080025ad   Thumb Code    20  debug.o(.text.Debug_Timer_Disable)
+    Debug_Timer_Enable                       0x080025c1   Thumb Code    20  debug.o(.text.Debug_Timer_Enable)
+    Debug_Timer_Init                         0x080025d5   Thumb Code    96  debug.o(.text.Debug_Timer_Init)
+    GPIO_Init                                0x08002651   Thumb Code   222  gpio.o(.text.GPIO_Init)
+    GPIO_SetPin                              0x0800272f   Thumb Code    22  gpio.o(.text.GPIO_SetPin)
+    GPIO_TogglePin                           0x08002745   Thumb Code    26  gpio.o(.text.GPIO_TogglePin)
+    SystemInit                               0x0800275f   Thumb Code     2  system_stm32g0xx.o(.text.SystemInit)
+    TIM16_IRQHandler                         0x08002761   Thumb Code    64  debug.o(.text.TIM16_IRQHandler)
+    TIM17_IRQHandler                         0x080027a5   Thumb Code    32  sw_timebase.o(.text.TIM17_IRQHandler)
+    USART2_IRQHandler                        0x080027c9   Thumb Code    84  debug.o(.text.USART2_IRQHandler)
+    main                                     0x08002979   Thumb Code    20  main.o(.text.main)
+    sw_timebase_ISR_executables              0x0800298d   Thumb Code    76  sw_timebase.o(.text.sw_timebase_ISR_executables)
+    sw_timebase_Init                         0x080029d9   Thumb Code    20  sw_timebase.o(.text.sw_timebase_Init)
+    sw_timebase_atomic_operation_end         0x080029ed   Thumb Code     4  sw_timebase.o(.text.sw_timebase_atomic_operation_end)
+    sw_timebase_atomic_operation_start       0x080029f1   Thumb Code     4  sw_timebase.o(.text.sw_timebase_atomic_operation_start)
+    sw_timebase_counter_get_current_value    0x080029f5   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_current_value)
+    sw_timebase_counter_get_end_value        0x08002a0d   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_end_value)
+    sw_timebase_counter_get_reload_value     0x08002a25   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_reload_value)
+    sw_timebase_counter_get_status           0x08002a3d   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_get_status)
+    sw_timebase_counter_get_target_value     0x08002a5d   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_target_value)
+    sw_timebase_counter_get_temporary_value  0x08002a75   Thumb Code    24  sw_timebase.o(.text.sw_timebase_counter_get_temporary_value)
+    sw_timebase_counter_set_current_value    0x08002a8d   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_current_value)
+    sw_timebase_counter_set_end_value        0x08002aa9   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_end_value)
+    sw_timebase_counter_set_reload_value     0x08002ac5   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_reload_value)
+    sw_timebase_counter_set_status           0x08002ae1   Thumb Code    52  sw_timebase.o(.text.sw_timebase_counter_set_status)
+    sw_timebase_counter_set_temporary_value  0x08002b15   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_set_temporary_value)
+    sw_timebase_counter_ss_clear_flag        0x08002b31   Thumb Code    20  sw_timebase.o(.text.sw_timebase_counter_ss_clear_flag)
+    sw_timebase_counter_ss_continous_expired_event 0x08002b45   Thumb Code    78  sw_timebase.o(.text.sw_timebase_counter_ss_continous_expired_event)
+    sw_timebase_counter_ss_get_end_value     0x08002b95   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value)
+    sw_timebase_counter_ss_get_end_value_sub_sec 0x08002bb1   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_end_value_sub_sec)
+    sw_timebase_counter_ss_get_reload_value  0x08002bcd   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_reload_value)
+    sw_timebase_counter_ss_get_status        0x08002be9   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_get_status)
+    sw_timebase_counter_ss_get_target_value  0x08002c09   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_target_value)
+    sw_timebase_counter_ss_get_temporary_value 0x08002c25   Thumb Code    28  sw_timebase.o(.text.sw_timebase_counter_ss_get_temporary_value)
+    sw_timebase_counter_ss_reset             0x08002c41   Thumb Code    94  sw_timebase.o(.text.sw_timebase_counter_ss_reset)
+    sw_timebase_counter_ss_reset_period_status_flag 0x08002ca1   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_reset_period_status_flag)
+    sw_timebase_counter_ss_set_current_value 0x08002cc1   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_current_value)
+    sw_timebase_counter_ss_set_end_value     0x08002ce1   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value)
+    sw_timebase_counter_ss_set_end_value_sub_sec 0x08002d01   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_end_value_sub_sec)
+    sw_timebase_counter_ss_set_period_value  0x08002d25   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_period_value)
+    sw_timebase_counter_ss_set_reload_value  0x08002d49   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_reload_value)
+    sw_timebase_counter_ss_set_securely      0x08002d6d   Thumb Code   204  sw_timebase.o(.text.sw_timebase_counter_ss_set_securely)
+    sw_timebase_counter_ss_set_status        0x08002e3d   Thumb Code    52  sw_timebase.o(.text.sw_timebase_counter_ss_set_status)
+    sw_timebase_counter_ss_set_target_value  0x08002e75   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_target_value)
+    sw_timebase_counter_ss_set_temporary_value 0x08002e99   Thumb Code    32  sw_timebase.o(.text.sw_timebase_counter_ss_set_temporary_value)
+    sw_timebase_counter_ss_update            0x08002ebd   Thumb Code   396  sw_timebase.o(.text.sw_timebase_counter_ss_update)
+    sw_timebase_counter_ss_update_all        0x0800304d   Thumb Code    46  sw_timebase.o(.text.sw_timebase_counter_ss_update_all)
+    sw_timebase_counter_update               0x0800307b   Thumb Code   318  sw_timebase.o(.text.sw_timebase_counter_update)
+    sw_timebase_counter_update_all           0x080031b9   Thumb Code    46  sw_timebase.o(.text.sw_timebase_counter_update_all)
+    sw_timebase_enable                       0x080031e9   Thumb Code   100  sw_timebase.o(.text.sw_timebase_enable)
+    sw_timebase_get_seconds                  0x08003265   Thumb Code     8  sw_timebase.o(.text.sw_timebase_get_seconds)
+    sw_timebase_get_sub_seconds              0x0800326d   Thumb Code     8  sw_timebase.o(.text.sw_timebase_get_sub_seconds)
+    sw_timebase_main_loop_executable         0x08003279   Thumb Code    60  sw_timebase.o(.text.sw_timebase_main_loop_executable)
+    sw_timebase_struct_init                  0x080032b9   Thumb Code   316  sw_timebase.o(.text.sw_timebase_struct_init)
+    sw_timebase_variable_sync                0x080033f9   Thumb Code    64  sw_timebase.o(.text.sw_timebase_variable_sync)
+    Region$$Table$$Base                      0x0800343c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800344c   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     Debug                                    0x20000060   Data         141  debug.o(.bss.Debug)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
@@ -1421,9 +1422,9 @@ Memory Map of the image
 
   Image Entry point : 0x080020c1
 
-  Load Region LR_IROM1 (Base: 0x08002000, Size: 0x00001448, Max: 0x00006000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08002000, Size: 0x0000144c, Max: 0x00006000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08002000, Load base: 0x08002000, Size: 0x00001448, Max: 0x00006000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08002000, Load base: 0x08002000, Size: 0x0000144c, Max: 0x00006000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1485,90 +1486,90 @@ Memory Map of the image
     0x08002364   0x08002364   0x0000000c   Code   RO          544    .text               c_p.l(sys_exit.o)
     0x08002370   0x08002370   0x00000002   Code   RO          567    .text               c_p.l(use_no_semi.o)
     0x08002372   0x08002372   0x00000000   Code   RO          569    .text               c_p.l(indicate_semi.o)
-    0x08002372   0x08002372   0x00000020   Code   RO            4    .text.App_Main_Loop  app.o
-    0x08002392   0x08002392   0x00000002   PAD
-    0x08002394   0x08002394   0x0000004c   Code   RO            2    .text.App_Setup     app.o
-    0x080023e0   0x080023e0   0x0000000c   Code   RO           46    .text.Debug_Counter_Reset  debug.o
-    0x080023ec   0x080023ec   0x00000094   Code   RO           28    .text.Debug_GPIO_Init  debug.o
-    0x08002480   0x08002480   0x00000008   Code   RO           50    .text.Debug_Get_Buf_Index  debug.o
-    0x08002488   0x08002488   0x0000001c   Code   RO          136    .text.Debug_Init    debug.o
-    0x080024a4   0x080024a4   0x00000078   Code   RO           30    .text.Debug_Reg_Init  debug.o
-    0x0800251c   0x0800251c   0x00000014   Code   RO           54    .text.Debug_Rx_Byte  debug.o
-    0x08002530   0x08002530   0x00000078   Code   RO           26    .text.Debug_Struct_Init  debug.o
-    0x080025a8   0x080025a8   0x00000014   Code   RO           40    .text.Debug_Timer_Disable  debug.o
-    0x080025bc   0x080025bc   0x00000014   Code   RO           38    .text.Debug_Timer_Enable  debug.o
-    0x080025d0   0x080025d0   0x0000007c   Code   RO           36    .text.Debug_Timer_Init  debug.o
-    0x0800264c   0x0800264c   0x000000de   Code   RO          171    .text.GPIO_Init     gpio.o
-    0x0800272a   0x0800272a   0x00000016   Code   RO          173    .text.GPIO_SetPin   gpio.o
-    0x08002740   0x08002740   0x0000001a   Code   RO          177    .text.GPIO_TogglePin  gpio.o
-    0x0800275a   0x0800275a   0x00000002   Code   RO          423    .text.SystemInit    system_stm32g0xx.o
-    0x0800275c   0x0800275c   0x00000044   Code   RO           48    .text.TIM16_IRQHandler  debug.o
-    0x080027a0   0x080027a0   0x00000024   Code   RO          223    .text.TIM17_IRQHandler  sw_timebase.o
-    0x080027c4   0x080027c4   0x0000005c   Code   RO           56    .text.USART2_IRQHandler  debug.o
-    0x08002820   0x08002820   0x00000028   Code   RO           32    .text.__NVIC_EnableIRQ  debug.o
-    0x08002848   0x08002848   0x0000002c   Code   RO          203    .text.__NVIC_EnableIRQ  sw_timebase.o
-    0x08002874   0x08002874   0x0000007c   Code   RO           34    .text.__NVIC_SetPriority  debug.o
-    0x080028f0   0x080028f0   0x00000084   Code   RO          201    .text.__NVIC_SetPriority  sw_timebase.o
-    0x08002974   0x08002974   0x00000014   Code   RO          188    .text.main          main.o
-    0x08002988   0x08002988   0x0000004c   Code   RO          225    .text.sw_timebase_ISR_executables  sw_timebase.o
-    0x080029d4   0x080029d4   0x00000014   Code   RO          205    .text.sw_timebase_Init  sw_timebase.o
-    0x080029e8   0x080029e8   0x00000004   Code   RO          221    .text.sw_timebase_atomic_operation_end  sw_timebase.o
-    0x080029ec   0x080029ec   0x00000004   Code   RO          219    .text.sw_timebase_atomic_operation_start  sw_timebase.o
-    0x080029f0   0x080029f0   0x00000018   Code   RO          263    .text.sw_timebase_counter_get_current_value  sw_timebase.o
-    0x08002a08   0x08002a08   0x00000018   Code   RO          267    .text.sw_timebase_counter_get_end_value  sw_timebase.o
-    0x08002a20   0x08002a20   0x00000018   Code   RO          275    .text.sw_timebase_counter_get_reload_value  sw_timebase.o
-    0x08002a38   0x08002a38   0x00000020   Code   RO          253    .text.sw_timebase_counter_get_status  sw_timebase.o
-    0x08002a58   0x08002a58   0x00000018   Code   RO          279    .text.sw_timebase_counter_get_target_value  sw_timebase.o
-    0x08002a70   0x08002a70   0x00000018   Code   RO          283    .text.sw_timebase_counter_get_temporary_value  sw_timebase.o
-    0x08002a88   0x08002a88   0x0000001c   Code   RO          265    .text.sw_timebase_counter_set_current_value  sw_timebase.o
-    0x08002aa4   0x08002aa4   0x0000001c   Code   RO          269    .text.sw_timebase_counter_set_end_value  sw_timebase.o
-    0x08002ac0   0x08002ac0   0x0000001c   Code   RO          277    .text.sw_timebase_counter_set_reload_value  sw_timebase.o
-    0x08002adc   0x08002adc   0x00000034   Code   RO          255    .text.sw_timebase_counter_set_status  sw_timebase.o
-    0x08002b10   0x08002b10   0x0000001c   Code   RO          285    .text.sw_timebase_counter_set_temporary_value  sw_timebase.o
-    0x08002b2c   0x08002b2c   0x00000014   Code   RO          365    .text.sw_timebase_counter_ss_clear_flag  sw_timebase.o
-    0x08002b40   0x08002b40   0x0000004e   Code   RO          383    .text.sw_timebase_counter_ss_continous_expired_event  sw_timebase.o
-    0x08002b8e   0x08002b8e   0x00000002   PAD
-    0x08002b90   0x08002b90   0x0000001c   Code   RO          339    .text.sw_timebase_counter_ss_get_end_value  sw_timebase.o
-    0x08002bac   0x08002bac   0x0000001c   Code   RO          343    .text.sw_timebase_counter_ss_get_end_value_sub_sec  sw_timebase.o
-    0x08002bc8   0x08002bc8   0x0000001c   Code   RO          351    .text.sw_timebase_counter_ss_get_reload_value  sw_timebase.o
-    0x08002be4   0x08002be4   0x00000020   Code   RO          325    .text.sw_timebase_counter_ss_get_status  sw_timebase.o
-    0x08002c04   0x08002c04   0x0000001c   Code   RO          355    .text.sw_timebase_counter_ss_get_target_value  sw_timebase.o
-    0x08002c20   0x08002c20   0x0000001c   Code   RO          359    .text.sw_timebase_counter_ss_get_temporary_value  sw_timebase.o
-    0x08002c3c   0x08002c3c   0x0000005e   Code   RO          363    .text.sw_timebase_counter_ss_reset  sw_timebase.o
-    0x08002c9a   0x08002c9a   0x00000002   PAD
-    0x08002c9c   0x08002c9c   0x00000020   Code   RO          333    .text.sw_timebase_counter_ss_reset_period_status_flag  sw_timebase.o
-    0x08002cbc   0x08002cbc   0x00000020   Code   RO          337    .text.sw_timebase_counter_ss_set_current_value  sw_timebase.o
-    0x08002cdc   0x08002cdc   0x00000020   Code   RO          341    .text.sw_timebase_counter_ss_set_end_value  sw_timebase.o
-    0x08002cfc   0x08002cfc   0x00000024   Code   RO          345    .text.sw_timebase_counter_ss_set_end_value_sub_sec  sw_timebase.o
-    0x08002d20   0x08002d20   0x00000024   Code   RO          349    .text.sw_timebase_counter_ss_set_period_value  sw_timebase.o
-    0x08002d44   0x08002d44   0x00000024   Code   RO          353    .text.sw_timebase_counter_ss_set_reload_value  sw_timebase.o
-    0x08002d68   0x08002d68   0x000000d0   Code   RO          371    .text.sw_timebase_counter_ss_set_securely  sw_timebase.o
-    0x08002e38   0x08002e38   0x00000038   Code   RO          327    .text.sw_timebase_counter_ss_set_status  sw_timebase.o
-    0x08002e70   0x08002e70   0x00000024   Code   RO          357    .text.sw_timebase_counter_ss_set_target_value  sw_timebase.o
-    0x08002e94   0x08002e94   0x00000024   Code   RO          361    .text.sw_timebase_counter_ss_set_temporary_value  sw_timebase.o
-    0x08002eb8   0x08002eb8   0x00000190   Code   RO          375    .text.sw_timebase_counter_ss_update  sw_timebase.o
-    0x08003048   0x08003048   0x0000002e   Code   RO          397    .text.sw_timebase_counter_ss_update_all  sw_timebase.o
-    0x08003076   0x08003076   0x0000013e   Code   RO          299    .text.sw_timebase_counter_update  sw_timebase.o
-    0x080031b4   0x080031b4   0x0000002e   Code   RO          321    .text.sw_timebase_counter_update_all  sw_timebase.o
-    0x080031e2   0x080031e2   0x00000002   PAD
-    0x080031e4   0x080031e4   0x0000007c   Code   RO          199    .text.sw_timebase_enable  sw_timebase.o
-    0x08003260   0x08003260   0x00000008   Code   RO          231    .text.sw_timebase_get_seconds  sw_timebase.o
-    0x08003268   0x08003268   0x0000000c   Code   RO          227    .text.sw_timebase_get_sub_seconds  sw_timebase.o
-    0x08003274   0x08003274   0x00000040   Code   RO          401    .text.sw_timebase_main_loop_executable  sw_timebase.o
-    0x080032b4   0x080032b4   0x00000140   Code   RO          197    .text.sw_timebase_struct_init  sw_timebase.o
-    0x080033f4   0x080033f4   0x00000044   Code   RO          403    .text.sw_timebase_variable_sync  sw_timebase.o
-    0x08003438   0x08003438   0x00000010   Data   RO          622    Region$$Table       anon$$obj.o
+    0x08002372   0x08002372   0x00000024   Code   RO            4    .text.App_Main_Loop  app.o
+    0x08002396   0x08002396   0x00000002   PAD
+    0x08002398   0x08002398   0x0000004c   Code   RO            2    .text.App_Setup     app.o
+    0x080023e4   0x080023e4   0x0000000c   Code   RO           46    .text.Debug_Counter_Reset  debug.o
+    0x080023f0   0x080023f0   0x00000094   Code   RO           28    .text.Debug_GPIO_Init  debug.o
+    0x08002484   0x08002484   0x00000008   Code   RO           50    .text.Debug_Get_Buf_Index  debug.o
+    0x0800248c   0x0800248c   0x0000001c   Code   RO          136    .text.Debug_Init    debug.o
+    0x080024a8   0x080024a8   0x00000078   Code   RO           30    .text.Debug_Reg_Init  debug.o
+    0x08002520   0x08002520   0x00000014   Code   RO           54    .text.Debug_Rx_Byte  debug.o
+    0x08002534   0x08002534   0x00000078   Code   RO           26    .text.Debug_Struct_Init  debug.o
+    0x080025ac   0x080025ac   0x00000014   Code   RO           40    .text.Debug_Timer_Disable  debug.o
+    0x080025c0   0x080025c0   0x00000014   Code   RO           38    .text.Debug_Timer_Enable  debug.o
+    0x080025d4   0x080025d4   0x0000007c   Code   RO           36    .text.Debug_Timer_Init  debug.o
+    0x08002650   0x08002650   0x000000de   Code   RO          171    .text.GPIO_Init     gpio.o
+    0x0800272e   0x0800272e   0x00000016   Code   RO          173    .text.GPIO_SetPin   gpio.o
+    0x08002744   0x08002744   0x0000001a   Code   RO          177    .text.GPIO_TogglePin  gpio.o
+    0x0800275e   0x0800275e   0x00000002   Code   RO          423    .text.SystemInit    system_stm32g0xx.o
+    0x08002760   0x08002760   0x00000044   Code   RO           48    .text.TIM16_IRQHandler  debug.o
+    0x080027a4   0x080027a4   0x00000024   Code   RO          223    .text.TIM17_IRQHandler  sw_timebase.o
+    0x080027c8   0x080027c8   0x0000005c   Code   RO           56    .text.USART2_IRQHandler  debug.o
+    0x08002824   0x08002824   0x00000028   Code   RO           32    .text.__NVIC_EnableIRQ  debug.o
+    0x0800284c   0x0800284c   0x0000002c   Code   RO          203    .text.__NVIC_EnableIRQ  sw_timebase.o
+    0x08002878   0x08002878   0x0000007c   Code   RO           34    .text.__NVIC_SetPriority  debug.o
+    0x080028f4   0x080028f4   0x00000084   Code   RO          201    .text.__NVIC_SetPriority  sw_timebase.o
+    0x08002978   0x08002978   0x00000014   Code   RO          188    .text.main          main.o
+    0x0800298c   0x0800298c   0x0000004c   Code   RO          225    .text.sw_timebase_ISR_executables  sw_timebase.o
+    0x080029d8   0x080029d8   0x00000014   Code   RO          205    .text.sw_timebase_Init  sw_timebase.o
+    0x080029ec   0x080029ec   0x00000004   Code   RO          221    .text.sw_timebase_atomic_operation_end  sw_timebase.o
+    0x080029f0   0x080029f0   0x00000004   Code   RO          219    .text.sw_timebase_atomic_operation_start  sw_timebase.o
+    0x080029f4   0x080029f4   0x00000018   Code   RO          263    .text.sw_timebase_counter_get_current_value  sw_timebase.o
+    0x08002a0c   0x08002a0c   0x00000018   Code   RO          267    .text.sw_timebase_counter_get_end_value  sw_timebase.o
+    0x08002a24   0x08002a24   0x00000018   Code   RO          275    .text.sw_timebase_counter_get_reload_value  sw_timebase.o
+    0x08002a3c   0x08002a3c   0x00000020   Code   RO          253    .text.sw_timebase_counter_get_status  sw_timebase.o
+    0x08002a5c   0x08002a5c   0x00000018   Code   RO          279    .text.sw_timebase_counter_get_target_value  sw_timebase.o
+    0x08002a74   0x08002a74   0x00000018   Code   RO          283    .text.sw_timebase_counter_get_temporary_value  sw_timebase.o
+    0x08002a8c   0x08002a8c   0x0000001c   Code   RO          265    .text.sw_timebase_counter_set_current_value  sw_timebase.o
+    0x08002aa8   0x08002aa8   0x0000001c   Code   RO          269    .text.sw_timebase_counter_set_end_value  sw_timebase.o
+    0x08002ac4   0x08002ac4   0x0000001c   Code   RO          277    .text.sw_timebase_counter_set_reload_value  sw_timebase.o
+    0x08002ae0   0x08002ae0   0x00000034   Code   RO          255    .text.sw_timebase_counter_set_status  sw_timebase.o
+    0x08002b14   0x08002b14   0x0000001c   Code   RO          285    .text.sw_timebase_counter_set_temporary_value  sw_timebase.o
+    0x08002b30   0x08002b30   0x00000014   Code   RO          365    .text.sw_timebase_counter_ss_clear_flag  sw_timebase.o
+    0x08002b44   0x08002b44   0x0000004e   Code   RO          383    .text.sw_timebase_counter_ss_continous_expired_event  sw_timebase.o
+    0x08002b92   0x08002b92   0x00000002   PAD
+    0x08002b94   0x08002b94   0x0000001c   Code   RO          339    .text.sw_timebase_counter_ss_get_end_value  sw_timebase.o
+    0x08002bb0   0x08002bb0   0x0000001c   Code   RO          343    .text.sw_timebase_counter_ss_get_end_value_sub_sec  sw_timebase.o
+    0x08002bcc   0x08002bcc   0x0000001c   Code   RO          351    .text.sw_timebase_counter_ss_get_reload_value  sw_timebase.o
+    0x08002be8   0x08002be8   0x00000020   Code   RO          325    .text.sw_timebase_counter_ss_get_status  sw_timebase.o
+    0x08002c08   0x08002c08   0x0000001c   Code   RO          355    .text.sw_timebase_counter_ss_get_target_value  sw_timebase.o
+    0x08002c24   0x08002c24   0x0000001c   Code   RO          359    .text.sw_timebase_counter_ss_get_temporary_value  sw_timebase.o
+    0x08002c40   0x08002c40   0x0000005e   Code   RO          363    .text.sw_timebase_counter_ss_reset  sw_timebase.o
+    0x08002c9e   0x08002c9e   0x00000002   PAD
+    0x08002ca0   0x08002ca0   0x00000020   Code   RO          333    .text.sw_timebase_counter_ss_reset_period_status_flag  sw_timebase.o
+    0x08002cc0   0x08002cc0   0x00000020   Code   RO          337    .text.sw_timebase_counter_ss_set_current_value  sw_timebase.o
+    0x08002ce0   0x08002ce0   0x00000020   Code   RO          341    .text.sw_timebase_counter_ss_set_end_value  sw_timebase.o
+    0x08002d00   0x08002d00   0x00000024   Code   RO          345    .text.sw_timebase_counter_ss_set_end_value_sub_sec  sw_timebase.o
+    0x08002d24   0x08002d24   0x00000024   Code   RO          349    .text.sw_timebase_counter_ss_set_period_value  sw_timebase.o
+    0x08002d48   0x08002d48   0x00000024   Code   RO          353    .text.sw_timebase_counter_ss_set_reload_value  sw_timebase.o
+    0x08002d6c   0x08002d6c   0x000000d0   Code   RO          371    .text.sw_timebase_counter_ss_set_securely  sw_timebase.o
+    0x08002e3c   0x08002e3c   0x00000038   Code   RO          327    .text.sw_timebase_counter_ss_set_status  sw_timebase.o
+    0x08002e74   0x08002e74   0x00000024   Code   RO          357    .text.sw_timebase_counter_ss_set_target_value  sw_timebase.o
+    0x08002e98   0x08002e98   0x00000024   Code   RO          361    .text.sw_timebase_counter_ss_set_temporary_value  sw_timebase.o
+    0x08002ebc   0x08002ebc   0x00000190   Code   RO          375    .text.sw_timebase_counter_ss_update  sw_timebase.o
+    0x0800304c   0x0800304c   0x0000002e   Code   RO          397    .text.sw_timebase_counter_ss_update_all  sw_timebase.o
+    0x0800307a   0x0800307a   0x0000013e   Code   RO          299    .text.sw_timebase_counter_update  sw_timebase.o
+    0x080031b8   0x080031b8   0x0000002e   Code   RO          321    .text.sw_timebase_counter_update_all  sw_timebase.o
+    0x080031e6   0x080031e6   0x00000002   PAD
+    0x080031e8   0x080031e8   0x0000007c   Code   RO          199    .text.sw_timebase_enable  sw_timebase.o
+    0x08003264   0x08003264   0x00000008   Code   RO          231    .text.sw_timebase_get_seconds  sw_timebase.o
+    0x0800326c   0x0800326c   0x0000000c   Code   RO          227    .text.sw_timebase_get_sub_seconds  sw_timebase.o
+    0x08003278   0x08003278   0x00000040   Code   RO          401    .text.sw_timebase_main_loop_executable  sw_timebase.o
+    0x080032b8   0x080032b8   0x00000140   Code   RO          197    .text.sw_timebase_struct_init  sw_timebase.o
+    0x080033f8   0x080033f8   0x00000044   Code   RO          403    .text.sw_timebase_variable_sync  sw_timebase.o
+    0x0800343c   0x0800343c   0x00000010   Data   RO          622    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003448, Size: 0x00000d00, Max: 0x00002000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800344c, Size: 0x00000d00, Max: 0x00002000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000        -       0x00000060   Zero   RW          486    .bss                c_p.l(libspace.o)
     0x20000060        -       0x0000008d   Zero   RW          138    .bss.Debug          debug.o
-    0x200000ed   0x08003448   0x00000003   PAD
+    0x200000ed   0x0800344c   0x00000003   PAD
     0x200000f0        -       0x00000004   Zero   RW          406    .bss.sw_timebase    sw_timebase.o
-    0x200000f4   0x08003448   0x00000004   PAD
+    0x200000f4   0x0800344c   0x00000004   PAD
     0x200000f8        -       0x00000608   Zero   RW          405    .bss.sw_timebase_type  sw_timebase.o
     0x20000700        -       0x00000200   Zero   RW          414    HEAP                startup_stm32g030xx.o
     0x20000900        -       0x00000400   Zero   RW          413    STACK               startup_stm32g030xx.o
@@ -1581,7 +1582,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       108          0          0          0          0       1955   app.o
+       112          0          0          0          0       1956   app.o
        944         76          0          0        141      12059   debug.o
        270          0          0          0          0       2310   gpio.o
         20          0          0          0          0        352   main.o
@@ -1590,7 +1591,7 @@ Image component sizes
          2          0          0          0          0       1939   system_stm32g0xx.o
 
     ----------------------------------------------------------------------
-      4350        190        208          0       3232      42849   Object Totals
+      4354        190        208          0       3232      42850   Object Totals
          0          0         16          0          0          0   (incl. Generated)
          8          0          0          0          7          0   (incl. Padding)
 
@@ -1639,15 +1640,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      4984        212        208          0       3328      43245   Grand Totals
-      4984        212        208          0       3328      43245   ELF Image Totals
-      4984        212        208          0          0          0   ROM Totals
+      4988        212        208          0       3328      43246   Grand Totals
+      4988        212        208          0       3328      43246   ELF Image Totals
+      4988        212        208          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 5192 (   5.07kB)
+    Total RO  Size (Code + RO Data)                 5196 (   5.07kB)
     Total RW  Size (RW Data + ZI Data)              3328 (   3.25kB)
-    Total ROM Size (Code + RO Data + RW Data)       5192 (   5.07kB)
+    Total ROM Size (Code + RO Data + RW Data)       5196 (   5.07kB)
 
 ==============================================================================
 
