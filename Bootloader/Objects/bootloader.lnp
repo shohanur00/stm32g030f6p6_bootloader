@@ -5,6 +5,7 @@
 ".\objects\flash.o"
 ".\objects\gpio.o"
 ".\objects\main.o"
+".\objects\program_flash.o"
 ".\objects\sw_timebase.o"
 ".\objects\startup_stm32g030xx.o"
 ".\objects\system_stm32g0xx.o"

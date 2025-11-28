@@ -1,5 +1,5 @@
-./objects/sw_timebase.o: sw_timebase.c sw_timebase.h \
+./objects/program_flash.o: program_flash.c program_flash.h \
   C:\Users\user\AppData\Local\Arm\Packs\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h \
   C:\Users\user\AppData\Local\Arm\Packs\ARM\CMSIS\6.2.0\CMSIS\Core\Include\core_cm0plus.h \
   C:\Users\user\AppData\Local\Arm\Packs\Keil\STM32G0xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h \
-  gpio.h
+  debug.h flash.h
